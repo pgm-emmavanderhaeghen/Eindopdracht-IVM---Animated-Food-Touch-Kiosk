@@ -1,29 +1,20 @@
-import styles from "./assets/styles/App.module.scss";
-import hero from "./assets/images/Hero-banner-text.png"
-import {ReactComponent as Smile} from "./assets/images/bocca-smile.svg"
-import Button from "./components/Button/Button";
+import { Routes, Route } from "react-router-dom";
+import Start from "./Start";
+import Selection from "./Selection";
+import Summary from "./Summary";
+import Payment from "./Payment";
+import NotFound from "./NotFound";
+
 function App() {
   return (
-    <div className={styles.container}>
-        <img src={hero} className={styles.logo} alt="logo" />
-        <h1>Welcome at bocca</h1>
-        <p>
-          <strong>Bocca</strong> is a fresh, quick and delicious <strong>pastabar </strong>  
-          located in Bruges & Ghent. Check out what we got on the menu.
-        </p>
-        <div className={styles.start}>
-          <button className={`${styles.btn} ${styles.btnBlack}`}>Eat here <br/>         
-            <Smile/>
-          </button>
-          <Button>Take away <br/>         
-            <Smile/>
-          </Button>
-        </div>
-        <br/>
-        <button>English</button>
-        <button>Nederlands</button>
-        <button>Français</button>
-        <button>Deutsch</button>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="selection" element={<Selection />} />
+        <Route path="summary" element={<Summary />} />
+        <Route path="payment" element={<Payment />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
