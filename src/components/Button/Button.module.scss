@@ -1,12 +1,12 @@
 .btn {
-    font-family: 'poppins';
+    font-family: 'Filson Pro';
     cursor: pointer;
     margin: 1rem;
     padding: 1rem;
     border: none;
     border-radius: 1rem;
     box-shadow: 0 2px 2px 0 rgba(138, 138, 138, 0.2), 0 2px 3px 0 rgba(138, 138, 138, 0.2);
-
+    background-color: #f6f4f4;
     svg {
         width: 6rem;
     }
@@ -16,7 +16,14 @@
     font-size: 1.5rem;
     min-width: 10rem;
     min-height: 10rem;
-    margin: 2rem;
+    margin: 1rem;
+}
+
+.long {
+    font-size: 1.5rem;
+    min-width: 22rem;
+    min-height: 10rem;
+    margin: 1rem;
 }
 
 .black {
@@ -27,4 +34,9 @@
 .red {
     background-color: #DF2027;
     color: white;
+}
+
+.pink {
+    background-color: #F5DED9;
+    color: #DF2027;
 }
