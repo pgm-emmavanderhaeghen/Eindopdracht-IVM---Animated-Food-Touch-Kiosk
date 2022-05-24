@@ -1,0 +1,38 @@
+@import url('fonts.scss');
+
+body {
+    font-family: 'Filson Pro';
+    width: 45rem;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+
+.flexContainer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FAFAFA;
+    display: flex;
+}
+
+.m4 {
+    margin: 6.2rem 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.text {
+    max-width: 26rem;
+    margin: 0 auto;
+}
+
+.beker {
+    width: 4rem;
+}

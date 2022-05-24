@@ -1,0 +1,49 @@
+@font-face {
+    font-family:'Filson Pro';
+	src: url('assets/fonts/FilsonPro-Black.woff2') format('woff2'),
+		url('assets/fonts/FilsonPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Filson Pro';
+	src: url('assets/fonts/FilsonPro-Bold.woff2') format('woff2'),
+		url('assets/fonts/FilsonPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Filson Pro';
+	src: url('assets/fonts/FilsonPro-Medium.woff2') format('woff2'),
+		url('assets/fonts/FilsonPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Filson Pro';
+	src: url('assets/fonts/FilsonPro-Regular.woff2') format('woff2'),
+		url('assets/fonts/FilsonPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Filson Pro';
+	src: url('assets/fonts/FilsonPro-Light.woff2') format('woff2'),
+		url('assets/fonts/FilsonPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
