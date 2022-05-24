@@ -1,0 +1,20 @@
+.sidebar{
+    width: 20rem;
+    display: block;
+    position: sticky;
+    right: 0;
+    top: 0;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #f0f0f0;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #8D8D8D;
+}
