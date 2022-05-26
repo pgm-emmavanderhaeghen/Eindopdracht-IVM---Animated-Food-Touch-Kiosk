@@ -2,3 +2,21 @@
     margin: 2rem 0;
     border-bottom: 2px solid #DCDCDC;
 }
+
+.long {
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+    min-width: 10rem;
+    margin: 2rem 4rem;
+    
+    img, p {
+        padding: 1rem;
+    }
+}
+
+.grey {
+    background-color: #f0f0f0;
+}
+

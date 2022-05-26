@@ -12,6 +12,11 @@
     }
 }
 
+.transparent {
+    box-shadow: none;
+    background-color: #FAFAFA;
+}
+
 .square {
     font-size: 1.5rem;
     min-width: 10rem;
