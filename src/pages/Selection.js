@@ -5,6 +5,7 @@ import { routes } from "./routes.js";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png"
+import food from "../assets/images/food.svg"
 
 function Selection() {
   return (
@@ -26,17 +27,21 @@ function Selection() {
               Extra        
             </Button>
           <h1>Our specials</h1>
-          <Button variant="square">
-              Bocca Love       
+            <Button variant="square" color="transparent">
+              <img src={food} className={styles.food} alt="order" />
+              <p>Bocca Love</p>       
             </Button>
-            <Button variant="square">
-              Maria Soul      
+            <Button variant="square" color="transparent">
+              <img src={food} className={styles.food} alt="order" />
+              <p>Maria Soul</p>       
             </Button>
-            <Button variant="square">
-              Pesto Basta       
+            <Button variant="square" color="transparent">
+              <img src={food} className={styles.food} alt="order" />
+              <p>Pesto Basta</p>       
             </Button>
-            <Button variant="square">
-              Say Cheese        
+            <Button variant="square" color="transparent">
+              <img src={food} className={styles.food} alt="order" />
+              <p>Say Cheese</p>       
             </Button>
       </div>
       <Sidebar>

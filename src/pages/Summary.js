@@ -10,17 +10,22 @@ function Summary() {
     <div className={styles.container}>      
       <div className={styles.m4}>
         <h1>Summary page</h1>
-        <Card>
+        <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
         </Card>
-        <Card>
+        <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
         </Card>
-        <Card>
+        <Card variant="long" color="grey">
+          <img src={order} className={styles.beker} alt="order" />
+          <p>small penne bocca sauce with bacon</p>
+          <p>€ 7.50</p>
+        </Card>
+        <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
