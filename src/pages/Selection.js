@@ -6,8 +6,13 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png"
 import food from "../assets/images/food.svg"
+import Modal from "../components/Modal/Modal";
+import { useState } from "react";
+
 
 function Selection() {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <div className={styles.flexContainer}>      
       <div>
@@ -17,9 +22,12 @@ function Selection() {
             </Button>
           </Link>
         <h1>Hungry?</h1>
-            <Button variant="long" color="pink">
+            <button onClick={() => setShowModal(true)} className='button button-blue'>Open modal</button>
+            <Modal onClose={() => setShowModal(false)} show={showModal}/>
+            <Button onClick={() => setShowModal(true)} variant="long" color="pink">
               Pasta in 4 steps        
             </Button>
+            
             <Button variant="square">
               Drinks        
             </Button>
