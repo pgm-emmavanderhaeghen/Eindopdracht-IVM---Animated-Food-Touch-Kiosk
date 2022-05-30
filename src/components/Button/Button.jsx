@@ -2,9 +2,9 @@ import React from 'react'
 import styles from "./Button.module.scss"
 
 
-const Button = ({color= '', variant= '', children}) => {
+const Button = ({color= '', variant= '', children, onClick}) => {
   return (
-    <button className={`${styles.btn} ${styles[variant]} ${styles[color]}`}>
+    <button onClick={onClick} className={`${styles.btn} ${styles[variant]} ${styles[color]}`}>
         {children}
     </button>
   )
