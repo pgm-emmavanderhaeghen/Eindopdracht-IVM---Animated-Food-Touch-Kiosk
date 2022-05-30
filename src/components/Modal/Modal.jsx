@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from "./Modal.module.scss"
 
-const Modal = props => {
-    if (!props.show) {
+const Modal = ({show, onClose, children}) => {
+    if (!show) {
         return null
     }
     return (
-        <div className={styles.modal} onClick={props.onClose}>
+        <div className={styles.modal} onClick={onClose}>
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-                <h4>Dialog</h4>
-                <p>Are you sure you want to delete the item?</p>
-                <button onClick={props.onClose} className={styles.button}>Cancel</button>
+                <h2>Pasta in 4 steps</h2>
+                {children}
+                <button onClick={onClose} className={styles.button}>Cancel</button>
             </div>
         </div>
     )
