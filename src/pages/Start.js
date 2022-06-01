@@ -3,7 +3,7 @@ import {ReactComponent as Smile} from "../assets/images/bocca-smile.svg"
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import Button from "../components/Button/Button"
-import { routes } from "./routes.js";
+import { ROUTES } from "./routes.js";
 
 function Start() {
   return (
@@ -17,13 +17,13 @@ function Start() {
         </p>
       </div>
         <div className={styles.m4}>
-          <Link to={routes.SELECTION}>
+          <Link to={ROUTES.SELECTION}>
             <Button variant='square' color='black'>
               Eat here <br/>         
               <Smile/>
             </Button>
           </Link>
-          <Link to={routes.SELECTION}>
+          <Link to={ROUTES.SELECTION}>
             <Button variant='square' color='red'>
               Take away <br/>   
               <Smile/>

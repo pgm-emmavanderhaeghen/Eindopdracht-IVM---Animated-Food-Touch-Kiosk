@@ -1,7 +1,7 @@
 import styles from "../App.module.scss";
 import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { routes } from "./routes.js";
+import { ROUTES } from "./routes.js";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png"
 
@@ -30,12 +30,12 @@ function Summary() {
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
         </Card>
-          <Link to={routes.SELECTION}>
+          <Link to={ROUTES.SELECTION}>
             <Button>
               Go back <br/>         
             </Button>
           </Link>
-          <Link to={routes.PAYMENT}>
+          <Link to={ROUTES.PAYMENT}>
             <Button color='red'>
               Pay now <br/>         
             </Button>
