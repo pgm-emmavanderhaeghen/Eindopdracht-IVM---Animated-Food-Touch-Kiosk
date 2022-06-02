@@ -3,7 +3,7 @@ import {ReactComponent as Smile} from "../assets/images/bocca-smile.svg"
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import Button from "../components/Button/Button"
-import { ROUTES } from "./routes.js";
+import { ROUTES } from "../constans/routes";
 
 function Start() {
   return (
