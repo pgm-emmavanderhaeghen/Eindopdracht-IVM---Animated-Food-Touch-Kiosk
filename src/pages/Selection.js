@@ -10,12 +10,15 @@ import Modal from "../components/Modal/Modal";
 import React, { useState } from "react";
 import { TODO_API } from "../constans/api";
 import useFetch from "../hooks/useFetch";
+import Counter from "../components/Counter/Counter";
 
 function Selection() {
   const [showModal, setShowModal] = useState(false);
   // const [orders, setOrders] = useState([]);
+  
 
-  const [response, error, loading] = useFetch(TODO_API);
+
+  const [response] = useFetch(TODO_API);
 
   return (
     <div className={styles.flexContainer}>
@@ -91,20 +94,33 @@ function Selection() {
               <p>€ 7.50</p>
             </Card>
           ))} */}
+          
+          {/* {
+            count > 0 && 
+          } */}
         <Card>
           <img src={order} className={styles.beker} alt="order" />
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
+          <Counter/>
         </Card>
         <Card>
           <img src={order} className={styles.beker} alt="order" />
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
+          <Counter/>
         </Card>
         <Card>
           <img src={order} className={styles.beker} alt="order" />
           <p>small penne bocca sauce with bacon</p>
           <p>€ 7.50</p>
+          <Counter/>
+        </Card>
+        <Card>
+          <img src={order} className={styles.beker} alt="order" />
+          <p>small penne bocca sauce with bacon</p>
+          <p>€ 7.50</p>
+          <Counter/>
         </Card>
       </Sidebar>
     </div>
