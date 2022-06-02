@@ -1,7 +1,7 @@
 import styles from "../App.module.scss";
 import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { ROUTES } from "./routes.js";
+import { ROUTES } from "../constans/routes";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png"
 
