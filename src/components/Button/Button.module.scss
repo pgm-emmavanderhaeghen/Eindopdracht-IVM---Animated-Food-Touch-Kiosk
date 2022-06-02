@@ -5,10 +5,21 @@
     padding: 1rem;
     border: none;
     border-radius: 1rem;
-    box-shadow: 0 2px 2px 0 rgba(138, 138, 138, 0.2), 0 2px 3px 0 rgba(138, 138, 138, 0.2);
     background-color: #f6f4f4;
+    box-shadow: 0 2px 2px 0 rgba(138, 138, 138, 0.2), 0 2px 3px 0 rgba(138, 138, 138, 0.2);
+    transition: 0.2s all;
+
     svg {
         width: 6rem;
+    }
+
+    /* Adding transformation when the button is active */
+    
+    &:active {
+        transform: scale(1.05);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(66, 66, 66, 0.24);
+        /* Lowering the shadow */
     }
 }
 
