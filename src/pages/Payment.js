@@ -1,8 +1,9 @@
 import styles from "../App.module.scss";
 import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { ROUTES } from "./routes.js";
+
 import loading from "../assets/images/loading.svg"
+import { ROUTES } from "../constans/routes";
 
 function Payment() {
   return (
