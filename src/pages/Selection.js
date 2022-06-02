@@ -1,37 +1,21 @@
 import styles from "../App.module.scss";
 import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { ROUTES } from "./routes.js";
+import { ROUTES } from "../constans/routes";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png";
 import food from "../assets/images/food.svg";
 import Modal from "../components/Modal/Modal";
-import React, { useState, useEffect } from "react";
-
-// https://pgm-emmavanderhaeghen.github.io/IVM-Animated-Food-Touch-Kiosk/bocca.json
+import React, { useState } from "react";
+import { TODO_API } from "../constans/api";
+import useFetch from "../hooks/useFetch";
 
 function Selection() {
   const [showModal, setShowModal] = useState(false);
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   // const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    fetch(
-      `https://pgm-emmavanderhaeghen.github.io/IVM-Animated-Food-Touch-Kiosk/bocca.json`
-    )
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .then(() => setLoading(false))
-      .catch((e) => setError(e.message));
-  }, []);
-
-  if (loading) return <h1>Loading ...</h1>;
-  if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
-  if (!data) return null;
-
+  const [response, error, loading] = useFetch(TODO_API);
 
   return (
     <div className={styles.flexContainer}>
@@ -45,21 +29,18 @@ function Selection() {
 
         <h1>Hungry?</h1>
 
-        {/* <button onClick={() => setShowModal(true)} className='button button-blue'>Open modal</button> */}
-        <Modal onClose={() => setShowModal(false)} show={showModal}>
-          <h4>Size</h4>
-          <p>{JSON.stringify(data.pasta.sizes)}</p>
-          <h4>Pasta</h4>
-          <p>{JSON.stringify(data.pasta.pastas)}</p>
-          <h4>Sauce</h4>
-          <p>{JSON.stringify(data.pasta.sauces)}</p>
-          <h4>Toppings</h4>
-          <p>{JSON.stringify(data.pasta.toppings)}</p>
-          <h4>Drinks</h4>
-          <p>{JSON.stringify(data.drinks)}</p>
-          <h4>Extra</h4>
-          <p>{JSON.stringify(data.extras)}</p>
-        </Modal>
+        {response && (
+          <Modal onClose={() => setShowModal(false)} show={showModal}>
+            <h4>Size</h4>
+            <p>{JSON.stringify(response.pasta.sizes)}</p>
+            <h4>Pasta</h4>
+            <p>{JSON.stringify(response.pasta.pastas)}</p>
+            <h4>Sauce</h4>
+            <p>{JSON.stringify(response.pasta.sauces)}</p>
+            <h4>Toppings</h4>
+            <p>{JSON.stringify(response.pasta.toppings)}</p>
+          </Modal>
+        )}
 
         <Button onClick={() => setShowModal(true)} variant="long" color="pink">
           Pasta in 4 steps
