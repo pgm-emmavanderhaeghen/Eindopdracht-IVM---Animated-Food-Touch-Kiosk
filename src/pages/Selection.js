@@ -16,8 +16,6 @@ function Selection() {
   const [showModal, setShowModal] = useState(false);
   // const [orders, setOrders] = useState([]);
   
-
-
   const [response] = useFetch(TODO_API);
 
   return (
@@ -34,14 +32,7 @@ function Selection() {
 
         {response && (
           <Modal onClose={() => setShowModal(false)} show={showModal}>
-            <h4>Size</h4>
-            <p>{JSON.stringify(response.pasta.sizes)}</p>
-            <h4>Pasta</h4>
-            <p>{JSON.stringify(response.pasta.pastas)}</p>
-            <h4>Sauce</h4>
-            <p>{JSON.stringify(response.pasta.sauces)}</p>
-            <h4>Toppings</h4>
-            <p>{JSON.stringify(response.pasta.toppings)}</p>
+
           </Modal>
         )}
 

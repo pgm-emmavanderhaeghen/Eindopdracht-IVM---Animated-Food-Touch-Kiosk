@@ -19,13 +19,26 @@
     background-color: #fff;
     border: 2px solid #fff;
     border-radius: 2rem;
-    z-index: 2;
+    text-align: left;
+    height: 40rem;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
 }
 
 .button {
     border-radius: 10px;
     border: none;
-    margin: 1rem;
+    margin: 1rem 0;
     padding: .5rem 1rem;
     cursor: pointer;
+}
+
+.orderImg {
+    display: flex;
+    width: 4rem;
+    margin-bottom: .5rem;
 }
