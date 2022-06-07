@@ -12,24 +12,35 @@ function Summary() {
         <h1>Summary page</h1>
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
-          <p>small penne bocca sauce with bacon</p>
+          <strong>1x</strong> 
+          <ul>
+            <li>small penne</li>
+            <li>bocca sauce</li>
+            <li>with bacon</li>
+          </ul>
           <p>€ 7.50</p>
         </Card>
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
-          <p>small penne bocca sauce with bacon</p>
+          <strong>3x</strong> 
+          <ul>
+            <li>small penne</li>
+            <li>bocca sauce</li>
+            <li>with bacon</li>
+          </ul>
           <p>€ 7.50</p>
         </Card>
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
-          <p>small penne bocca sauce with bacon</p>
+          <strong>2x</strong> 
+          <ul>
+            <li>small penne</li>
+            <li>bocca sauce</li>
+            <li>with bacon</li>
+          </ul>
           <p>€ 7.50</p>
         </Card>
-        <Card variant="long" color="grey">
-          <img src={order} className={styles.beker} alt="order" />
-          <p>small penne bocca sauce with bacon</p>
-          <p>€ 7.50</p>
-        </Card>
+
           <Link to={ROUTES.SELECTION}>
             <Button>
               Go back <br/>         
