@@ -1,9 +1,12 @@
 import React from 'react'
 
-const IngredientList = () => {
-  return (
-    <div>IngredientList</div>
-  )
-}
+const IngredientList = ({children}) => {
+    return (
+      <div>
+          {children}
+      </div>
+    )
+  }
+  
 
 export default IngredientList
