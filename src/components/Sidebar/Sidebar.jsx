@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ROUTES } from '../../constans/routes'
+import { ROUTES } from '../../constants/routes'
 import Button from '../Button/Button'
 import styles from "./Sidebar.module.scss"
 

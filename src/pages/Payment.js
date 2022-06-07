@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
 
 import loading from "../assets/images/order-being-prepared.gif"
-import { ROUTES } from "../constans/routes";
+import { ROUTES } from "../constants/routes";
 
 function Payment() {
   return (

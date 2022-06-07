@@ -17,6 +17,10 @@
 
 
 .ingredientBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-width: 5rem;
     min-height: 5rem;
     background-color: #f4f4f4;
@@ -25,13 +29,14 @@
     border-radius: 1rem;
     transition: 0.2s all;
 
-    &:active {
+    &:active, .active {
         background-color: #F5DED9;
         color: #DF2027;
     }
 
     p {
         font-size: .8rem;
+        margin: 0;
     }
     
 }

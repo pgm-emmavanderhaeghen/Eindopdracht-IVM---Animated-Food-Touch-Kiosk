@@ -1,14 +1,14 @@
 import styles from "../App.module.scss";
 import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { ROUTES } from "../constans/routes";
+import { ROUTES } from "../constants/routes";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png";
 import food from "../assets/images/food.svg";
 import Modal from "../components/Modal/Modal";
 import React, { useState } from "react";
-import { TODO_API } from "../constans/api";
+import { TODO_API } from "../constants/api";
 import useFetch from "../hooks/useFetch";
 import Counter from "../components/Counter/Counter";
 

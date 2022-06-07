@@ -6,8 +6,8 @@ function NotFound() {
   return (
     <div className={styles.container}>      
       <div className={styles.m4}>
-        <h1>We are sorry, but the page you were looking for was Not Found</h1>
-        <Button>
+        <h1>We are sorry, but the page you were looking for doesn't exist</h1>
+        <Button color='red'>
           <Link to="/"> Go to the start page</Link>
         </Button>
       </div>

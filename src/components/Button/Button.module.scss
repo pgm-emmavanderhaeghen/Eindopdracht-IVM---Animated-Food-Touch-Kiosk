@@ -16,9 +16,9 @@
     /* Adding transformation when the button is active */
     
     &:active {
-        transform: scale(1.05);
+        transform: scale(1.01);
         /* Scaling button to 0.98 to its original size */
-        box-shadow: 3px 2px 22px 1px rgba(66, 66, 66, 0.24);
+        box-shadow: 3px 2px 26px 1px rgba(138, 138, 138, 0.24);
         /* Lowering the shadow */
     }
 }
