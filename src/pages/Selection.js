@@ -11,6 +11,7 @@ import React, { useState } from "react";
 import { TODO_API } from "../constants/api";
 import useFetch from "../hooks/useFetch";
 import Counter from "../components/Counter/Counter";
+import Heading from "../components/Heading/Heading";
 
 const Selection = () => {
   const { response, error, loading } = useFetch(TODO_API);
@@ -30,6 +31,7 @@ const Selection = () => {
       {response && (
         <>
           <div>
+
             <Link to={ROUTES.START}>
               <Button>
                 Go back to start
@@ -37,7 +39,7 @@ const Selection = () => {
               </Button>
             </Link>
 
-            <h1>Let's eat!</h1>
+            <Heading number="1">Let's eat!</Heading>
 
             {showModal && (
               <Modal onClose={() => setShowModal(false)} data={filteredData}></Modal>
@@ -51,18 +53,12 @@ const Selection = () => {
               Pasta in 4 steps
             </Button>
 
-            {/* <Modal onClose={() => setShowModal(false)} show={showModal}>
-</Modal> */}
-
             <Button
               onClick={() => handleModal(true, "drinks")}
               variant="square"
             >
               Drinks
             </Button>
-
-            {/* <Modal onClose={() => setShowModal(false)} show={showModal}>
-</Modal> */}
 
             <Button
               onClick={() => handleModal(true, "extras")}
@@ -71,7 +67,8 @@ const Selection = () => {
               Extras
             </Button>
 
-            <h1>Our specials</h1>
+            <Heading number="1">Our specials</Heading>
+            
             <Button variant="square" color="transparent">
               <img src={food} className={styles.food} alt="order" />
               <p>Bocca Love</p>
@@ -95,17 +92,17 @@ const Selection = () => {
 
           <Sidebar>
             {/* {order.length &&
-  order.map((o) => (
-    <Card>
-      <img src={order} className={styles.beker} alt="order" />
-      <p>small penne bocca sauce with bacon</p>
-      <p>€ 7.50</p>
-    </Card>
-  ))} */}
+                  order.map((o) => (
+                    <Card>
+                      <img src={order} className={styles.beker} alt="order" />
+                      <p>small penne bocca sauce with bacon</p>
+                      <p>€ 7.50</p>
+                    </Card>
+                  ))} */}
 
-            {/* {
-    count > 0 && 
-  } */}
+                            {/* {
+                    count > 0 && 
+                  } */}
             <Card>
               <img src={order} className={styles.beker} alt="order" />
               <p>small penne bocca sauce with bacon</p>
