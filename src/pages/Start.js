@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import Button from "../components/Button/Button"
 import { ROUTES } from "../constants/routes";
+import Heading from "../components/Heading/Heading";
 
 function Start() {
   return (
@@ -12,9 +13,10 @@ function Start() {
       <div className={styles.m4}>
         <h1>Welcome at bocca</h1>
         <p className={styles.text}>
-          <strong>Bocca</strong> is a fresh, quick and delicious <strong>pastabar </strong>  
+          Bocca is a fresh, quick and delicious <strong>pastabar </strong>  
           located in Bruges & Ghent. Check out what we got on the menu.
         </p>
+        <Heading color="red" variant="spaced">Hungry?</Heading>
       </div>
         <div className={styles.m4}>
           <Link to={ROUTES.SELECTION}>

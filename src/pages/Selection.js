@@ -37,12 +37,10 @@ const Selection = () => {
               </Button>
             </Link>
 
-            <h1>Hungry?</h1>
+            <h1>Let's eat!</h1>
 
             {showModal && (
-              <Modal onClose={() => setShowModal(false)} data={filteredData}>
-                <p>fghj</p>
-              </Modal>
+              <Modal onClose={() => setShowModal(false)} data={filteredData}></Modal>
             )}
 
             <Button
