@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from "./Heading.module.scss"
 
-const Heading = ({color= '', variant= '', children}) => {
+const Heading = ({number, color = '', variant = '', children}) => {
+    const HeadingTag = `h${number}`;
     return (
-        <h2 className={`${styles[variant]} ${styles[color]}`}>
+        <HeadingTag className={`${styles[variant] ?? ''} ${styles[color] ?? ''}`}>
             {children}
-        </h2>
+        </HeadingTag>
     )
 }
 
