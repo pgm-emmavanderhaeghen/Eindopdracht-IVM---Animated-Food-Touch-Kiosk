@@ -10,12 +10,17 @@
     align-items: center;
     justify-content: center;
     z-index: 20;
+
+    .modalContent {
+        opacity:0;
+        animation: scaleUp .6s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
 }
 
 .modalContent {
     padding: 2rem;
     width: 32rem;
-    height: 45rem;
+    min-height: 45rem;
     background-color: #fff;
     border: 2px solid #fff;
     border-radius: 2rem;
@@ -24,7 +29,17 @@
     overflow-y: scroll;
 }
 
-/* width */
+@keyframes scaleUp {
+    0% {
+        transform:scale(.8) translateY(1000px);
+        opacity:0;
+    }
+    100% {
+        transform:scale(1) translateY(0px);
+        opacity:1;
+    }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
