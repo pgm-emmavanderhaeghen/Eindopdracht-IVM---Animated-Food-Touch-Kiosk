@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from '../Button/Button'
 
 const Counter = () => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
     const handleClick = (a) => {
         setCount(count + a)
     }
