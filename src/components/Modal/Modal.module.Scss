@@ -40,6 +40,18 @@
     }
 }
 
+.step {
+    width: 2rem;
+}
+
+.header {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: .8rem;
+    margin: 1rem 0;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
