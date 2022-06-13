@@ -1,10 +1,13 @@
 import React from 'react'
+import { Ingredient } from '../Ingredient/Ingredient'
+import styles from './IngredientList.module.scss'
+
 
 const IngredientList = ({children}) => {
     return (
-      <div>
-          {children}
-      </div>
+      <ul className={styles.list}>
+          <Ingredient></Ingredient>
+      </ul>
     )
   }
   
