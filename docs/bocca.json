@@ -1,21 +1,23 @@
 {
-    "drinks": [
-        "bionina",
-        "yugen Kombucha",
-        "almdudler",
-        "fritz-kola",
-        "fritz-limo",
-        "fritz-spritz",
-        "coca cola",
-        "cola zero",
-        "ice-tea",
-        "orangina",
-        "canada dry",
-        "spa reine",
-        "spa intense",
-        "san pellegrino",
-        "schweppes premium"
-    ],
+    "drinks": {
+        "drinks": [
+            "bionina",
+            "yugen Kombucha",
+            "almdudler",
+            "fritz-kola",
+            "fritz-limo",
+            "fritz-spritz",
+            "coca cola",
+            "cola zero",
+            "ice-tea",
+            "orangina",
+            "canada dry",
+            "spa reine",
+            "spa intense",
+            "san pellegrino",
+            "schweppes premium"
+        ]
+    } ,
     "pasta": {
         "sizes": [
             "small",
