@@ -1,23 +1,18 @@
-import React, { useState } from 'react'
-import { TODO_API } from '../../constants/api';
-import useFetch from '../../hooks/useFetch';
+import React from 'react'
 import Button from '../Button/Button'
-import Heading from '../Heading/Heading';
 import { Ingredient } from '../Ingredient/Ingredient';
 import styles from "./Modal.module.scss"
-import one from "../../assets/images/1.png"
-import two from "../../assets/images/2.png"
-import three from "../../assets/images/3.png"
-import four from "../../assets/images/4.png"
+// import one from "../../assets/images/1.png"
+// import two from "../../assets/images/2.png"
+// import three from "../../assets/images/3.png"
+// import four from "../../assets/images/4.png"
 import IngredientList from '../IngredientList/IngredientList';
+import order from "../../assets/images/Boccabeker-p-500.png";
+import Heading from '../Heading/Heading';
+
 
 const Modal = ({data, onClose, children}) => {
 
-    // const data = {
-    //     sizes: ["small", "medium", "large"],
-    //   pastas: ["penne","spagh"],
-    //   sauces: ["bocca","bolognese"]
-    //   }
     //   // Object.keys(data) => gives us ['sizes', 'pastas', 'sauces'] ~subcat~
     //   // data[subcat].map(item => ()) => gives us [small, medium, large]
 
@@ -33,17 +28,18 @@ const Modal = ({data, onClose, children}) => {
         <div className={styles.modal} onClick={onClose}>
 
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-            <h2>Pasta in 4 steps</h2>
-
             {data && typeof data === 'object' ?
                 Object.keys(data)?.map(subcat => (
                     <>
-                        <h3>{subcat}</h3>
-                        <IngredientList>
+                        <Heading number="3" color="red">{subcat}</Heading>
+                        <ul className={styles.list}>
                             {data[subcat].map(item => 
-                                <Ingredient>{item}</Ingredient>
+                                <li className={styles.ingredientBtn}>
+                                    <img src={order} className={styles.orderImg} alt="order" />
+                                    <p>{item}</p>
+                                </li>
                             )}
-                        </IngredientList>
+                        </ul>
                     </>
                 )) : data?.map(item => <Ingredient>{item}</Ingredient>)
             }
