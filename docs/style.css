@@ -2,3 +2,16 @@ body {
   color: black;
   font-family: 'Poppins';
 }
+
+a {
+  background-color: #DF2027;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #b5161c;
+}
