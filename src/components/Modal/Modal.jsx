@@ -44,8 +44,6 @@ const Modal = ({data, onClose, children}) => {
                 )) : data?.map(item => <Ingredient>{item}</Ingredient>)
             }
 
-
-
         <Button 
             onClick={onClose} 
             color='red' 
