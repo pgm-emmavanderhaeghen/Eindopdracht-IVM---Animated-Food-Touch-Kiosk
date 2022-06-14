@@ -1,0 +1,340 @@
+{
+    "Drinks": {
+        "softdrinks": [
+            {
+                "name": "bionina",
+                "image": "https://agfstorage.blob.core.windows.net/misc/BJ_nl/2019/10/31/Bionina1.jpg",
+                "price": "€3,50"
+            },
+            {
+                "name": "yugen Kombucha",
+                "image": "https://static.delhaize.be/medias/sys_master/h8b/hf0/10975531499550.jpg",
+                "price": "€4,50"
+            },
+            {
+                "name": "almdudler",
+                "image": "https://static.delhaize.be/medias/sys_master/ha6/hb1/11027830767646.jpg",
+                "price": "€3"
+            },
+            {
+                "name": "fritz-kola",
+                "image": "https://deklokdranken.blob.core.windows.net/product-images/2011052.jpg",
+                "price": "€2,70"
+            },
+            {
+                "name": "fritz-limo",
+                "image": "https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/l/b-li-suaaa-2505-b-li-suaaa-2505-image_1-150218_0154.jpg",
+                "price": "€2,70"
+            },
+            {
+                "name": "fritz-spritz",
+                "image": "https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/l/b-li-suaaa-2525-b-li-suaaa-2525-image_1-150218_0156.jpg",
+                "price": "€3"
+            },
+            {
+                "name": "de Appelaere",
+                "image": "https://www.dekweker.nl/image-service/_jcr_content.product.08714242970077.image/1/large.jpeg",
+                "price": "€3,50"
+            },
+            {
+                "name": "coca cola",
+                "image": "https://prod.isg.bruneau.media/external/d8e3757054cafde0da9b1b93614452892f8096b6?source=https%3A%2F%2Fbruneau.simpleworkspace.net%2Fphp%2Fscripts%2FgetFile.php%3Ftype%3DpubAssetBase%26s%26key%3DfV-qqGXh0BRsu_PCEz_dGT-OwRBrvvDAFmC5pVnOYuuMO9VI5tQ%26t%3D16234162740000%26name%3D16974.jpg",
+                "price": "€2,30"
+            },
+            {
+                "name": "cola zero",
+                "image": "https://happysnack.be/wp-content/uploads/2020/11/cola-zero.jpg",
+                "price": "€2,30"
+            },
+            {
+                "name": "ice-tea",
+                "image": "https://www.goedkoopdrank.be/wp-content/uploads/2020/07/Ice-tea-original-PET-50cl-goedkoopdrank.jpg",
+                "price": "€2,60"
+            },
+            {
+                "name": "orangina",
+                "image": "https://cafebuitenland.be/wp-content/uploads/2020/06/Orangina.png",
+                "price": "€2,60"
+            },
+            {
+                "name": "canada dry",
+                "image": "https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/l/b-li-suaaa-1090-b-li-suaaa-1090-image_1-230217_2480.jpg",
+                "price": "€2,60"
+            },
+            {
+                "name": "spa reine",
+                "image": "https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plpet-1040-b-ea-plpet-1040-image_1-090419_3885.jpg",
+                "price": "€2,30"
+            },
+            {
+                "name": "spa intense",
+                "image": "https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-pepet-1055-b-ea-pepet-1055-image_1-160217_1620.jpg",
+                "price": "€3,30"
+            },
+            {
+                "name": "san pellegrino",
+                "image": "https://prod.isg.bruneau.media/external/756d28bb29eb16cad7c787555f6cb2fe253e1571?source=https%3A%2F%2Fbruneau.simpleworkspace.net%2Fphp%2Fscripts%2FgetFile.php%3Ftype%3DpubAssetBase%26s%26key%3DJwV8As9Joq4YAfBnX_1gAfLEBFH4yR1tuvLOS-9gDJk-qUf2lEY%26t%3D16234161500000%26name%3D83953.jpg",
+                "price": "€3,50"
+            },
+            {
+                "name": "schweppes premium",
+                "image": "https://d3r6kbofdnmd8.cloudfront.net/media/catalog/product/cache/image/1536x/a4e40ebdc3e371adff845072e1c73f37/1/0/101438_schweppes_premium-mixer_oroginal-tonic_200.jpg",
+                "price": "€3"
+            }
+        ]
+    } ,
+    "Pasta in 4 steps": {
+        "sizes": [
+            {
+                "name": "small",
+                "image": "",
+                "price": "€5,20"
+            },
+            {
+                "name": "medium",
+                "image": "",
+                "price": "€6,20"
+            },
+            {
+                "name": "large",
+                "image": "",
+                "price": "€7,20"
+            } 
+        ],
+        "pastas": [
+            {
+                "name": "penne",
+                "image": "",
+                "price": null
+            },
+            {
+                "name": "spaghetti",
+                "image": "",
+                "price": "+ €1"
+            },
+            {
+                "name": "fusilli",
+                "image": "",
+                "price": "+ €1"
+            },
+            {
+                "name": "gluten-free",
+                "image": "",
+                "price": "+ €2"
+            } 
+        ],
+        "sauces": [
+            {
+                "name": "bocca",
+                "image": "",
+                "summary": "Mildly spicy tomato cream sauce with or without bacon."
+            },
+            {
+                "name": "bolognese",
+                "image": "",
+                "summary": "Minced meat, tomato, spices."
+            },
+            {
+                "name": "cheese & ham",
+                "image": "",
+                "summary": ""
+            },
+            {
+                "name": "veggie",
+                "image": "",
+                "summary": "Aubergine, courgette, bell pepper, tomato & mushroom."
+            },
+            {
+                "name": "marisol",
+                "image": "",
+                "summary": "Herby chicken, roasted bell pepper in tomato sauce."
+            },
+            {
+                "name": "four cheeses",
+                "image": "",
+                "summary": "Cream cheese, Old Bruges, Parmesan & Emmental."
+            },
+            {
+                "name": "currysauce with smoked salmon",
+                "image": "",
+                "summary": "Mild spicy."
+            },
+            {
+                "name": "arrabbiata",
+                "image": "",
+                "summary": "Spicy tomato sauce."
+            },
+            {
+                "name": "green pesto",
+                "image": "",
+                "summary": "Pine nuts, parmesan, basil, garlic  & olive oil."
+            },
+            {
+                "name": "red pesto",
+                "image": "",
+                "summary": "Pine nuts, parmesan, basil, sun-dried tomatoes & olive oil."
+            }
+        ],
+        "toppings": [
+            {
+                "name": "emmental",
+                "image": "",
+                "price": "including"
+            },
+            {
+                "name": "extra mmental",
+                "image": "",
+                "price": "+ 0,50"
+            },
+            {
+                "name": "parmesan",
+                "image": "",
+                "price": "+ €1"
+            },
+            {
+                "name": "emmental & parmesan",
+                "image": "",
+                "price": "+ €1"
+            },
+            {
+                "name": "grated mozzarella",
+                "image": "",
+                "price": "+ €1,60"
+            },
+            {
+                "name": "raspadura",
+                "image": "",
+                "price": "+ €1,90"
+            },
+            {
+                "name": "feta",
+                "image": "",
+                "price": "+ €1,70"
+            },
+            {
+                "name": "bacon",
+                "image": "",
+                "price": "+ €1,60"
+            },
+            {
+                "name": "ham",
+                "image": "",
+                "price": "+ €1,60"
+            },
+            {
+                "name": "salmon",
+                "image": "",
+                "price": "+ €2,50"
+            },
+            {
+                "name": "tuna",
+                "image": "",
+                "price": "+ €2,50"
+            },
+            {
+                "name": "extra sauce",
+                "image": "",
+                "price": "+ €1,50"
+            },
+            {
+                "name": "sun dried tomatoes",
+                "image": "",
+                "price": "+ €1,70"
+            },
+            {
+                "name": "mozzarella balls",
+                "image": "",
+                "price": "+ €1,70"
+            },
+            {
+                "name": "pine nuts",
+                "image": "",
+                "price": "+ €1,50"
+            },
+            {
+                "name": "rocket salad",
+                "image": "",
+                "price": "+ €0,50"
+            },
+            {
+                "name": "olives",
+                "image": "",
+                "price": "+ €1,50"
+            }
+        ]
+    },
+    "Extras": {
+        "sides": [
+            {
+                "name": "basic salad",
+                "image": "",
+                "price": "€6"
+            },
+            {
+                "name": "soup to go",
+                "image": "",
+                "price": "€3"
+            },
+            {
+                "name": "tiramisu of the house",
+                "image": "",
+                "price": "€4"
+            },
+            {
+                "name": "chocolat mousse",
+                "image": "",
+                "price": "€4"
+            }
+        ],
+        "saucesToGo": [
+            {
+                "name": "bocca",
+                "image": "",
+                "price": "€7,50",
+                "amount": "0.50L"
+            },
+            {
+                "name": "bolognese",
+                "image": "",
+                "price": "€7",
+                "amount": "0.50L"            
+            },
+            {
+                "name": "cheese & ham",
+                "image": "",
+                "price": "€7",
+                "amount": "0.50L"            
+            },
+            {
+                "name": "veggie",
+                "image": "",
+                "price": "€9",
+                "amount": "0.50L"
+            },
+            {
+                "name": "marisol",
+                "image": "",
+                "price": "€9",
+                "amount": "0.50L"
+            },
+            {
+                "name": "four cheeses",
+                "image": "",
+                "price": "€7",
+                "amount": "0.50L"
+            },
+            {
+                "name": "currysauce with smoked salmon",
+                "image": "",
+                "price": "€9",
+                "amount": "0.50L"
+            },
+            {
+                "name": "arrabbiata",
+                "image": "",
+                "price": "€7,50",
+                "amount": "0.50L"
+            }
+        ]
+    }
+}

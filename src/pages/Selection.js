@@ -20,7 +20,6 @@ const Selection = () => {
   const { response, error, loading } = useFetch(TODO_API);
   const [showModal, setShowModal] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
-  // const [orders, setOrders] = useState([]);
 
   const handleModal = (show, category) => {
     setShowModal(show);
@@ -94,42 +93,7 @@ const Selection = () => {
           </div>
 
           <Sidebar>
-            {/* {order.length &&
-                  order.map((o) => (
-                    <Card>
-                      <img src={order} className={styles.beker} alt="order" />
-                      <p>small penne bocca sauce with bacon</p>
-                      <p>€ 7.50</p>
-                    </Card>
-                  ))} */}
 
-                            {/* {
-                    count > 0 && 
-                  } */}
-            <Card>
-              <img src={order} className={styles.beker} alt="order" />
-              <p>small penne bocca sauce with bacon</p>
-              <p>€ 7.50</p>
-              <Counter />
-            </Card>
-            <Card>
-              <img src={order} className={styles.beker} alt="order" />
-              <p>small penne bocca sauce with bacon</p>
-              <p>€ 7.50</p>
-              <Counter />
-            </Card>
-            <Card>
-              <img src={order} className={styles.beker} alt="order" />
-              <p>small penne bocca sauce with bacon</p>
-              <p>€ 7.50</p>
-              <Counter />
-            </Card>
-            <Card>
-              <img src={order} className={styles.beker} alt="order" />
-              <p>small penne bocca sauce with bacon</p>
-              <p>€ 7.50</p>
-              <Counter />
-            </Card>
           </Sidebar>
         </>
       )}
