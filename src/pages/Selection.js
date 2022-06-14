@@ -21,6 +21,7 @@ const Selection = () => {
   const [showModal, setShowModal] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
 
+  console.log(response)
   const handleModal = (show, category) => {
     setShowModal(show);
     setFilteredData(response[category]);
@@ -93,6 +94,20 @@ const Selection = () => {
           </div>
 
           <Sidebar>
+
+                <Card>
+                  <img src={order} className={styles.beker} alt="order" />
+                  <p>small penne bocca sauce without bacon & parmesan</p>
+                  <p>€ 7.50</p>
+                  <Counter />
+                </Card>
+
+                <Card>
+                  <img src={order} className={styles.beker} alt="order" />
+                  <p>large gluten-free marisol & pesto sauce with bacon</p>
+                  <p>€ 8.50</p>
+                  <Counter />
+                </Card>
 
           </Sidebar>
         </>
