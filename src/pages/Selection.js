@@ -5,7 +5,10 @@ import { ROUTES } from "../constants/routes";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png";
-import food from "../assets/images/food.svg";
+import bocca from "../assets/images/bocca-love.png";
+import maria from "../assets/images/maria-soul.png";
+import pesto from "../assets/images/pesto-basta.png";
+import cheese from "../assets/images/say-cheese.png";
 import Modal from "../components/Modal/Modal";
 import React, { useState } from "react";
 import { TODO_API } from "../constants/api";
@@ -70,22 +73,22 @@ const Selection = () => {
             <Heading number="1">Our specials</Heading>
             
             <Button variant="square" color="transparent">
-              <img src={food} className={styles.food} alt="order" />
+              <img src={bocca} className={styles.food} alt="order" />
               <p>Bocca Love</p>
             </Button>
 
             <Button variant="square" color="transparent">
-              <img src={food} className={styles.food} alt="order" />
+              <img src={maria} className={styles.food} alt="order" />
               <p>Maria Soul</p>
             </Button>
 
             <Button variant="square" color="transparent">
-              <img src={food} className={styles.food} alt="order" />
+              <img src={pesto} className={styles.food} alt="order" />
               <p>Pesto Basta</p>
             </Button>
 
             <Button variant="square" color="transparent">
-              <img src={food} className={styles.food} alt="order" />
+              <img src={cheese} className={styles.food} alt="order" />
               <p>Say Cheese</p>
             </Button>
           </div>
