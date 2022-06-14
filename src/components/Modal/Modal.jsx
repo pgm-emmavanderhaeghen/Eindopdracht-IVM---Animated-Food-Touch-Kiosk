@@ -23,7 +23,7 @@ const Modal = ({data, onClose, children}) => {
     //   </ul>
     //   )
 
-    
+    console.log(data)
     return (
         <div className={styles.modal} onClick={onClose}>
 
@@ -36,7 +36,7 @@ const Modal = ({data, onClose, children}) => {
                             {data[subcat].map(item => 
                                 <li className={styles.ingredientBtn}>
                                     <img src={order} className={styles.orderImg} alt="order" />
-                                    <p>{item.name}</p>
+                                    <p>{item}</p>
                                 </li>
                             )}
                         </ul>
@@ -44,13 +44,13 @@ const Modal = ({data, onClose, children}) => {
                 )) : data?.map(item => <Ingredient>{item}</Ingredient>)
             }
 
-        <Button 
-            onClick={onClose} 
-            color='red' 
-            className={styles.button}
-        >
-            Put it on my list!
-        </Button>
+            <Button 
+                onClick={onClose} 
+                color='red' 
+                className={styles.button}
+            >
+                Put it on my list!
+            </Button>
 
             </div>
         
