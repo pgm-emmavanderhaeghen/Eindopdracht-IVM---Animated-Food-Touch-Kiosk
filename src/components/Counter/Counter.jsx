@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import Button from '../Button/Button'
 
-const Counter = ({number = 1, countChange}) => {
-    const [count, setCount] = useState(number);
+const Counter = () => {
+    const [count, setCount] = useState(1);
     const handleClick = (a) => {
         setCount(count + a)
     }
-    useEffect(() => {
-        if (typeof countChange === 'function') {
-          countChange(count);
-        }
-      }, [count]);
+    // useEffect(() => {
+    //     if (typeof countChange === 'function') {
+    //       countChange(count);
+    //     }
+    //   }, [count]);
 
     return (
         <div>
