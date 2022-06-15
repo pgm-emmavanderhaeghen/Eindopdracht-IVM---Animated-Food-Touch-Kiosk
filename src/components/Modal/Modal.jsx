@@ -2,11 +2,7 @@ import React from 'react'
 import Button from '../Button/Button'
 import { Ingredient } from '../Ingredient/Ingredient';
 import styles from "./Modal.module.scss"
-// import one from "../../assets/images/1.png"
-// import two from "../../assets/images/2.png"
-// import three from "../../assets/images/3.png"
-// import four from "../../assets/images/4.png"
-import IngredientList from '../IngredientList/IngredientList';
+// import IngredientList from '../IngredientList/IngredientList';
 import order from "../../assets/images/Boccabeker-p-500.png";
 import Heading from '../Heading/Heading';
 
