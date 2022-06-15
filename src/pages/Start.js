@@ -13,32 +13,39 @@ function Start() {
     <Hero />
 
       <div className={styles.m4}>
+
         <Heading number="1">Welcome at bocca</Heading>
-        <p className={styles.text}>
+        <p className={styles.text} >
           Bocca is a fresh, quick and delicious <strong>pastabar </strong>  
           located in Bruges & Ghent. Check out what we got on the menu.
         </p>
-
         <Heading number="2" color="red" variant="spaced">Hungry?</Heading>
+      
       </div>
 
-        <div className={styles.m4}>
+      <div className={styles.m4}>
 
-          <Link to={ROUTES.SELECTION}>
-            <Button variant='square' color='black'>
-              Eat here <br/>         
-              <Smile/>
-            </Button>
-          </Link>
+        <Link to={ROUTES.SELECTION}>
+          <Button 
+            variant='square' 
+            color='black'
+          >
+            Eat here <br/>         
+            <Smile/>
+          </Button>
+        </Link>
 
-          <Link to={ROUTES.SELECTION}>
-            <Button variant='square' color='red'>
-              Take away <br/>   
-              <Smile/>
-            </Button>
-          </Link>   
+        <Link to={ROUTES.SELECTION}>
+          <Button 
+            variant='square' 
+            color='red'
+          >
+            Take away <br/>   
+            <Smile/>
+          </Button>
+        </Link>   
               
-        </div>
+      </div>
     </div>
   );
 }
