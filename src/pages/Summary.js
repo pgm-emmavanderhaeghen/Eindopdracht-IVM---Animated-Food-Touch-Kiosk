@@ -18,43 +18,43 @@ function Summary() {
           <strong>1x</strong> 
           <ul>
             <li>small penne</li>
-            <li>bocca sauce</li>
-            <li>with bacon</li>
+            <li>ham & cheese sauce</li>
+            <li>& parmesan</li>
           </ul>
-          <p>€ 7.50</p>
+          <p className={styles.price}>€ 6.50</p>
         </Card>
 
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
           <strong>3x</strong> 
           <ul>
-            <li>small penne</li>
-            <li>bocca sauce</li>
+            <li>large gluten-free</li>
+            <li>marisol sauce</li>
             <li>with bacon</li>
           </ul>
-          <p>€ 7.50</p>
+          <p className={styles.price}>€ 8.50</p>
         </Card>
 
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
           <strong>2x</strong> 
           <ul>
-            <li>small penne</li>
-            <li>bocca sauce</li>
-            <li>with bacon</li>
+            <li>medium spaghetti</li>
+            <li>arrabbiata sauce</li>
+            <li>& mozzarella balls</li>
           </ul>
-          <p>€ 7.50</p>
+          <p className={styles.price}>€ 7.50</p>
         </Card>
 
           <Link to={ROUTES.SELECTION}>
             <Button>
-              Go back <br/>         
+              Wait! Take me back <br/>         
             </Button>
           </Link>
 
           <Link to={ROUTES.PAYMENT}>
             <Button color='red'>
-              Pay now <br/>         
+              Okay great! I'll pay now <br/>         
             </Button>
           </Link>
           
