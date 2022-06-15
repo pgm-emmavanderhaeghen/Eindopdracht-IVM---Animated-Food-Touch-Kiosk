@@ -15,6 +15,7 @@ import { TODO_API } from "../constants/api";
 import useFetch from "../hooks/useFetch";
 import Counter from "../components/Counter/Counter";
 import Heading from "../components/Heading/Heading";
+import logo from "../assets/images/logo.svg"
 
 const Selection = () => {
   const { response, error, loading } = useFetch(TODO_API);
@@ -36,10 +37,7 @@ const Selection = () => {
           <div>
 
             <Link to={ROUTES.START}>
-              <Button>
-                Go back to start
-                <br />
-              </Button>
+              <img to={ROUTES.START} src={logo} className={styles.logo} alt="logo" />
             </Link>
 
             <Heading number="1">Let's eat!</Heading>
@@ -97,15 +95,22 @@ const Selection = () => {
 
                 <Card>
                   <img src={order} className={styles.beker} alt="order" />
-                  <p>small penne bocca sauce without bacon & parmesan</p>
-                  <p>€ 7.50</p>
+                  <p>small penne ham & cheese sauce & parmesan</p>
+                  <p className={styles.price}>€ 6.50</p>
                   <Counter />
                 </Card>
 
                 <Card>
                   <img src={order} className={styles.beker} alt="order" />
-                  <p>large gluten-free marisol & pesto sauce with bacon</p>
-                  <p>€ 8.50</p>
+                  <p>large gluten-free marisol sauce with bacon</p>
+                  <p className={styles.price}>€ 8.50</p>
+                  <Counter />
+                </Card>
+
+                <Card>
+                  <img src={order} className={styles.beker} alt="order" />
+                  <p>medium spaghetti arrabbiata sauce & mozzarella balls</p>
+                  <p className={styles.price}>€ 7.50</p>
                   <Counter />
                 </Card>
 
