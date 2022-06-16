@@ -16,12 +16,12 @@ npm run start
 ```
 
 ## Route overview
-  start page: /
-  selection page: /selection
-  summary page: /summary
-  payment page: /payment
-  success page: /success
-  failure page: /failure
+  start page: / <br />
+  selection page: /selection <br />
+  summary page: /summary <br />
+  payment page: /payment <br />
+  success page: /success <br />
+  failure page: /failure <br />
   not found page: /*
 
 ## Support
