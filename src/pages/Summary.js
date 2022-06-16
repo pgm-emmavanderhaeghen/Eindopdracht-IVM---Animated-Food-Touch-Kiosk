@@ -46,6 +46,8 @@ function Summary() {
           <p className={styles.price}>€ 7.50</p>
         </Card>
 
+        <Heading number="2">Your total is<span className={styles.price}> € 47</span> </Heading>
+
           <Link to={ROUTES.SELECTION}>
             <Button>
               Wait! Take me back <br/>         
