@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { ROUTES } from "./constants/routes";
 import Start from "./pages/Start";
 import Selection from "./pages/Selection";
 import Summary from "./pages/Summary";
@@ -12,13 +13,13 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Start />} />
-        <Route path="/selection" element={<Selection />} />
-        <Route path="/summary" element={<Summary />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/success" element={<Success />} />
-        <Route path="/failure" element={<Failure />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path={ROUTES.START} element={<Start />} />
+        <Route path={ROUTES.SELECTION} element={<Selection />} />
+        <Route path={ROUTES.SUMMARY} element={<Summary />} />
+        <Route path={ROUTES.PAYMENT} element={<Payment />} />
+        <Route path={ROUTES.SUCCES} element={<Success />} />
+        <Route path={ROUTES.FAILURE} element={<Failure />} />
+        <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
       </Routes>
     </div>
   );
