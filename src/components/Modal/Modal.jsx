@@ -31,8 +31,9 @@ const Modal = ({data, onClose, children}) => {
                         <ul className={styles.list}>
                             {data[subcat].map(item => 
                                 <li className={styles.ingredientBtn}>
-                                    <img src={order} className={styles.orderImg} alt="order" />
-                                    <p>{item}</p>
+                                    <img src={item.image} className={styles.orderImg} alt="img" />
+                                    <p>{item.name}</p>
+                                    <p>{item.price}</p>
                                 </li>
                             )}
                         </ul>

@@ -26,6 +26,7 @@ const Selection = () => {
     setShowModal(show);
     setFilteredData(response[category]);
   };
+  // category is defined in the Button component onClick function below
 
   return (
     <div className={styles.flexContainer}>
@@ -46,7 +47,7 @@ const Selection = () => {
             )}
 
             <Button
-              onClick={() => handleModal(true, "pasta")}
+              onClick={() => handleModal(true, "Pasta in 4 steps")}
               variant="long"
               color="pink"
             >
@@ -54,14 +55,14 @@ const Selection = () => {
             </Button>
 
             <Button
-              onClick={() => handleModal(true, "drinks")}
+              onClick={() => handleModal(true, "Drinks")}
               variant="square"
             >
               Drinks
             </Button>
 
             <Button
-              onClick={() => handleModal(true, "extras")}
+              onClick={() => handleModal(true, "Extras")}
               variant="square"
             >
               Extras
