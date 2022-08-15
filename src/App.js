@@ -17,7 +17,7 @@ function App() {
         <Route path={ROUTES.SELECTION} element={<Selection />} />
         <Route path={ROUTES.SUMMARY} element={<Summary />} />
         <Route path={ROUTES.PAYMENT} element={<Payment />} />
-        <Route path={ROUTES.SUCCES} element={<Success />} />
+        <Route path={ROUTES.SUCCESS} element={<Success />} />
         <Route path={ROUTES.FAILURE} element={<Failure />} />
         <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
       </Routes>

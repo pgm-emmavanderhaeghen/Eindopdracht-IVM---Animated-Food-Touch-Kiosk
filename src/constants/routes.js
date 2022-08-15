@@ -3,7 +3,7 @@ export const ROUTES = Object.freeze({
   SELECTION: "/selection",
   SUMMARY: "/summary",
   PAYMENT: "/payment",
-  SUCCESS: "/succes",
+  SUCCESS: "/success",
   FAILURE: "/failure",
   NOTFOUND: "/*"
 });

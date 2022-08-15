@@ -11,18 +11,17 @@ import pesto from "../assets/images/pesto-basta.png";
 import cheese from "../assets/images/say-cheese.png";
 import Modal from "../components/Modal/Modal";
 import React, { useState } from "react";
-import { TODO_API } from "../constants/api";
+import { BOCCA_API } from "../constants/api";
 import useFetch from "../hooks/useFetch";
 import Counter from "../components/Counter/Counter";
 import Heading from "../components/Heading/Heading";
 import logo from "../assets/images/logo.svg"
 
 const Selection = () => {
-  const { response, error, loading } = useFetch(TODO_API);
+  const { response, error, loading } = useFetch(BOCCA_API);
   const [showModal, setShowModal] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
 
-  console.log(response)
   const handleModal = (show, category) => {
     setShowModal(show);
     setFilteredData(response[category]);
