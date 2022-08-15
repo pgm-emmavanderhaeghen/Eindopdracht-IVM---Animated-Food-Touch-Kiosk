@@ -87,17 +87,17 @@
         "sizes": [
             {
                 "name": "small",
-                "image": "",
+                "image": "http://www.bocca.be/images/Boccabeker-p-500.png",
                 "price": "€5,20"
             },
             {
                 "name": "medium",
-                "image": "",
+                "image": "http://www.bocca.be/images/Boccabeker-p-500.png",
                 "price": "€6,20"
             },
             {
                 "name": "large",
-                "image": "",
+                "image": "http://www.bocca.be/images/Boccabeker-p-500.png",
                 "price": "€7,20"
             } 
         ],
