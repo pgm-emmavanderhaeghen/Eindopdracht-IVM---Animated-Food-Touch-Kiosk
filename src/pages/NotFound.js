@@ -3,10 +3,32 @@ import Button from "../components/Button/Button";
 import { Link } from "react-router-dom";
 import Heading from "../components/Heading/Heading";
 import notFound from "../assets/images/notfound.gif"
+import {motion} from 'framer-motion'
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -200
+  },
+  visible: {
+    opacity: 1,
+    y: -10,
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: { ease: 'easeInOut'}
+  }
+}
 
 function NotFound() {
   return (
-    <div className={styles.container}>      
+    <motion.div 
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    className={styles.container}>      
       <div className={styles.m4}>
 
         <Heading number="1">Oops!</Heading>
@@ -23,7 +45,7 @@ function NotFound() {
         </Link>
         
       </div>
-    </div>
+    </motion.div>
   );
 }
 
