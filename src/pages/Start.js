@@ -37,11 +37,12 @@ function Start() {
 
       <motion.div className={styles.m4}
       animate= {{ marginTop: 20 }}
+      transition={{ delay: 1 }}
       >
 
         <Heading number="1">Welcome at bocca</Heading>
         <p className={styles.text} >
-          Bocca is a fresh, quick and delicious <motion.strong animate={{color: '#DF2027'}}> pastabar </motion.strong>  
+          Bocca is a fresh, quick and delicious <motion.strong animate={{color: '#DF2027'}} transition={{ delay: 1 }}> pastabar </motion.strong>  
           located in Bruges & Ghent. Check out what we got on the menu.
         </p>
 
