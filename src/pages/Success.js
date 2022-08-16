@@ -1,10 +1,32 @@
 import styles from "../App.module.scss";
 import Heading from "../components/Heading/Heading";
 import success from "../assets/images/success.gif"
+import {motion} from 'framer-motion'
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -200
+  },
+  visible: {
+    opacity: 1,
+    y: -10,
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: { ease: 'easeInOut'}
+  }
+}
 
 function Success() {
   return (
-    <div className={styles.container}>      
+    <motion.div 
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    className={styles.container}>      
       <div className={styles.m4}>
 
         <Heading number="1">That's a wrap!</Heading>
@@ -15,7 +37,7 @@ function Success() {
         <img className={styles.round} src={success} alt="success" />
 
       </div>
-    </div>
+    </motion.div>
   );
 }
 
