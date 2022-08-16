@@ -1,14 +1,16 @@
 import React from 'react'
 import styles from "./Button.module.scss"
+import { motion } from 'framer-motion';
 
 const Button = ({color= '', variant= '', children, onClick}) => {
     return (
-        <button 
+        <motion.button 
+            animate={{ }}
             onClick={(onClick)} 
             className={`${styles.btn} ${styles[variant]} ${styles[color]}`}
         >
             {children}
-        </button>
+        </motion.button>
     )
 }
 
