@@ -5,17 +5,38 @@ import { ROUTES } from "../constants/routes";
 import Card from "../components/Card/Card";
 import order from "../assets/images/Boccabeker-p-500.png"
 import Heading from "../components/Heading/Heading";
+import {motion} from 'framer-motion';
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -200
+  },
+  visible: {
+    opacity: 1,
+    y: -10,
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: { ease: 'easeInOut'}
+  }
+}
 
 function Summary() {
   return (
-    <div className={styles.container}>      
+    <motion.div 
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    className={styles.container}>      
       <div className={styles.m4}>
 
       <Heading number="1">Is this what you ordered?</Heading>
 
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
-          <strong>1x</strong> 
           <ul>
             <li>small penne</li>
             <li>ham & cheese sauce</li>
@@ -26,7 +47,6 @@ function Summary() {
 
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
-          <strong>3x</strong> 
           <ul>
             <li>large gluten-free</li>
             <li>marisol sauce</li>
@@ -37,7 +57,6 @@ function Summary() {
 
         <Card variant="long" color="grey">
           <img src={order} className={styles.beker} alt="order" />
-          <strong>2x</strong> 
           <ul>
             <li>medium spaghetti</li>
             <li>arrabbiata sauce</li>
@@ -61,7 +80,7 @@ function Summary() {
           </Link>
           
       </div>
-    </div>
+    </motion.div>
   );
 }
 
