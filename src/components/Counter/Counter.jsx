@@ -1,29 +1,44 @@
 import React, { useState } from 'react'
-// import { useEffect } from 'react';
+import { useContext } from 'react';
+import { OrderContext } from '../../App';
 import Button from '../Button/Button'
+import styles from "./Counter.module.scss"
 
-const Counter = () => {
-    const [count, setCount] = useState(1);
-    const handleClick = (a) => {
-        setCount(count + a)
+const Counter = ({ item, defaultAmount = 1 }) => {
+    const [amount, setAmount] = useState(defaultAmount);
+    const [order, setOrder] = useContext(OrderContext);
+
+    const setCartContext = (val) => {
+        setAmount(val);
+        setOrder({
+            ...order, 
+            [item.id]: {...order, amount: val}
+        });
     }
-    // useEffect(() => {
-    //     if (typeof countChange === 'function') {
-    //       countChange(count);
-    //     }
-    //   }, [count]);
+
+    console.log(order);
+
+    const detractAmount = () => {
+        if (amount <= 1) {
+            return setCartContext(0)
+        }
+
+        return setCartContext(parseInt(amount) - 1);
+    }
 
     return (
-        <div>
+        <div className={styles.wrapper}>
             <Button 
-            onClick={() => handleClick(-1)} 
+            onClick={detractAmount} 
             variant="small" 
             color="pink">
                 -
             </Button>
-            {count}
+            
+            <input type="number" value={amount} onChange={e => setCartContext(e.target.value)} />
+
             <Button 
-            onClick={() => handleClick(1)} 
+            onClick={() => setCartContext (parseInt(amount) + 1)} 
             variant="small" 
             color="pink">
                 +
