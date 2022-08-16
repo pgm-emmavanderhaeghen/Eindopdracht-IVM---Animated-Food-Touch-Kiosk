@@ -13,9 +13,9 @@ import Modal from "../components/Modal/Modal";
 import React, { useState } from "react";
 import { BOCCA_API } from "../constants/api";
 import useFetch from "../hooks/useFetch";
-import Counter from "../components/Counter/Counter";
 import Heading from "../components/Heading/Heading";
 import logo from "../assets/images/logo.svg"
+import {motion} from 'framer-motion'
 
 const Selection = () => {
   const { response, error, loading } = useFetch(BOCCA_API);
@@ -28,13 +28,43 @@ const Selection = () => {
   };
   // category is defined in the Button component onClick function below
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      y: -200
+    },
+    visible: {
+      opacity: 1,
+      y: -10,
+    },
+    exit: {
+      opacity: 0,
+      y: -200,
+      transition: { ease: 'easeInOut'}
+    }
+  }
+
   return (
-    <div className={styles.flexContainer}>
+    <motion.div 
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    className={styles.flexContainer}>
       {loading && "Loading"}
       {error && error.message}
       {response && (
         <>
-          <div>
+          {showModal && (
+              <Modal 
+              onClose={() => setShowModal(false)} 
+              data={filteredData}></Modal>
+          )}
+
+          <motion.div 
+          initial= {{y: -230}}
+          animate={{ y: 10}}
+          >
 
             <Link to={ROUTES.START}>
               <img to={ROUTES.START} src={logo} className={styles.logo} alt="logo" />
@@ -42,9 +72,7 @@ const Selection = () => {
 
             <Heading number="1">Let's eat!</Heading>
 
-            {showModal && (
-              <Modal onClose={() => setShowModal(false)} data={filteredData}></Modal>
-            )}
+
 
             <Button
               onClick={() => handleModal(true, "Pasta in 4 steps")}
@@ -89,7 +117,7 @@ const Selection = () => {
               <img src={cheese} className={styles.food} alt="order" />
               <p>Say Cheese</p>
             </Button>
-          </div>
+          </motion.div>
 
           <Sidebar>
 
@@ -97,27 +125,18 @@ const Selection = () => {
                   <img src={order} className={styles.beker} alt="order" />
                   <p>small penne ham & cheese sauce & parmesan</p>
                   <p className={styles.price}>€ 6.50</p>
-                  <Counter />
                 </Card>
 
                 <Card>
                   <img src={order} className={styles.beker} alt="order" />
-                  <p>large gluten-free marisol sauce with bacon</p>
-                  <p className={styles.price}>€ 8.50</p>
-                  <Counter />
-                </Card>
-
-                <Card>
-                  <img src={order} className={styles.beker} alt="order" />
-                  <p>medium spaghetti arrabbiata sauce & mozzarella balls</p>
-                  <p className={styles.price}>€ 7.50</p>
-                  <Counter />
+                  <p>small penne ham & cheese sauce & parmesan</p>
+                  <p className={styles.price}>€ 6.50</p>
                 </Card>
 
           </Sidebar>
         </>
       )}
-    </div>
+    </motion.div>
   );
 };
 
