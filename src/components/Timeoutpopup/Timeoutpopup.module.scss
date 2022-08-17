@@ -1,0 +1,26 @@
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.512);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.popupContent {
+    padding: 3rem 2rem;
+    width: 32rem;
+    height: 10rem;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    text-align: center;
+}
