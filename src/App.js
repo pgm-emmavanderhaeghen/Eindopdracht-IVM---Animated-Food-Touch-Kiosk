@@ -9,18 +9,21 @@ import Success from "./pages/Success";
 import Failure from "./pages/Failure";
 import { createContext, useState } from "react";
 import { AnimatePresence } from "framer-motion"
+import Popup from "./components/Timeoutpopup/Timeoutpopup";
 export const OrderContext = createContext();
 
 function App() {
   const location = useLocation();
   const [order, setOrder] = useState({});
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
       <OrderContext.Provider value={[order, setOrder]}>
-        <AnimatePresence >
+        <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
+        <AnimatePresence exitBeforeEnter onExitComplete={() => setShowPopup(false)}>
         <Routes location={location} key={location.key}>
           <Route path={ROUTES.START} element={<Start />} />
-          <Route path={ROUTES.SELECTION} element={<Selection />} />
+          <Route path={ROUTES.SELECTION} element={<Selection setShowPopup={setShowPopup} />}  />
           <Route path={ROUTES.SUMMARY} element={<Summary />} />
           <Route path={ROUTES.PAYMENT} element={<Payment />} />
           <Route path={ROUTES.SUCCESS} element={<Success />} />

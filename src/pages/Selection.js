@@ -10,17 +10,24 @@ import maria from "../assets/images/maria-soul.png";
 import pesto from "../assets/images/pesto-basta.png";
 import cheese from "../assets/images/say-cheese.png";
 import Modal from "../components/Modal/Modal";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BOCCA_API } from "../constants/api";
 import useFetch from "../hooks/useFetch";
 import Heading from "../components/Heading/Heading";
 import logo from "../assets/images/logo.svg"
 import {motion} from 'framer-motion'
 
-const Selection = () => {
+const Selection = ({ setShowPopup }) => {
+
   const { response, error, loading } = useFetch(BOCCA_API);
   const [showModal, setShowModal] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPopup(true);
+    }, 30000)
+  }, [setShowPopup])
 
   const handleModal = (show, category) => {
     setShowModal(show);
