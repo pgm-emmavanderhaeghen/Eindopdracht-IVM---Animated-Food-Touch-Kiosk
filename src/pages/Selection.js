@@ -72,8 +72,6 @@ const Selection = () => {
 
             <Heading number="1">Let's eat!</Heading>
 
-
-
             <Button
               onClick={() => handleModal(true, "Pasta in 4 steps")}
               variant="long"
