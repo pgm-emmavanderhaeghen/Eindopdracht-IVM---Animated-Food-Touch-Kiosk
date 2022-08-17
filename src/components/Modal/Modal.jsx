@@ -4,21 +4,24 @@ import { Ingredient } from '../Ingredient/Ingredient';
 import styles from "./Modal.module.scss"
 import Heading from '../Heading/Heading';
 import {motion} from 'framer-motion';
+import { useState } from 'react';
+import { OrderContext } from '../../App';
+import { useContext } from 'react';
 
 const Modal = ({data, onClose, children}) => {
 
 const modalVariants = {
     hidden: {
         opacity: 0,
-        y: -200
+        y: -400
     },
     visible: {
         opacity: 1,
-        y: -10,
+        y: -30,
     },
     exit: {
         opacity: 0,
-        y: -200,
+        y: -400,
         transition: { ease: 'easeInOut'}
     }
 }
@@ -33,8 +36,30 @@ const modalVariants = {
     //   </ul>
     //   )
 
+    const [active, setActive] = useState(true);
+    const [order, setOrder] = useContext(OrderContext);
+
+    let tempOrder = [];
+
+    const buttonClicked = (event, name, price) => {
+        
+        setActive(current => !current);
+
+        tempOrder.push({
+            name,
+            price
+        })
+        
+        setOrder(
+            tempOrder
+        )
+        
+        console.log(tempOrder);
+
+    }
+
     return (
-        <div 
+        <motion.div 
         className={styles.modal} 
         onClick={onClose}>
 
@@ -51,7 +76,7 @@ const modalVariants = {
                         <Heading number="3" color="red">Choose your {subcat}</Heading>
                         <ul className={styles.list}>
                             {data[subcat].map(item => 
-                                <li className={styles.ingredientBtn}>
+                                <li className={active ? styles.ingredientBtn : styles.active} onClick={event => buttonClicked(event, item.name, item.price)}>
                                     <img src={item.image} className={styles.orderImg} alt="img" />
                                     <p>{item.name}</p>
                                     <p className={styles.price}>{item.price}</p>
@@ -65,13 +90,12 @@ const modalVariants = {
             <Button 
                 onClick={onClose} 
                 color='red' 
-                className={styles.button}
             >
                 Put it on my list!
             </Button>
 
             </motion.div>
-        </div>
+        </motion.div>
     )
 }
 
