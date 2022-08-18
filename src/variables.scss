@@ -2,19 +2,13 @@
 @import url('fonts.scss');
 
 // fonts
-$font: 'Filson Pro', sans-serif;
+$fontFamily: 'Filson Pro', sans-serif;
 
-// greys
-$bg: #FAFAFA;
-$bg-dark: #f0f0f0;
+// mid tones
+$color-light: #fff;
+$color-dark: #fafafa;
 
 // branding colors
-
-
-// spacers
-//   xs: '0.85rem',
-//   sm: '1rem',
-//   base: '1.3rem',
-//   md: '1.75rem',
-//   lg: '2rem',
-//   xl: '4rem',
+$color-pink: #DF2027;
+$color-red: #F5DED9;
+$color-yellow: #FEF3BE;
