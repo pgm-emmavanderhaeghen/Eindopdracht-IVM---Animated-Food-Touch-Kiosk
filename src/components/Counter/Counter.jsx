@@ -31,7 +31,7 @@ const Counter = ({ item, defaultAmount = 1 }) => {
             <Button 
             onClick={detractAmount} 
             variant="small" 
-            color="pink">
+            color="yellow">
                 -
             </Button>
             
@@ -40,7 +40,7 @@ const Counter = ({ item, defaultAmount = 1 }) => {
             <Button 
             onClick={() => setCartContext (parseInt(amount) + 1)} 
             variant="small" 
-            color="pink">
+            color="yellow">
                 +
             </Button>
         </div>
