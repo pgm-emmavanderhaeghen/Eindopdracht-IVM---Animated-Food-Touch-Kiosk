@@ -1,7 +1,7 @@
 @import 'variables';
 
 body {
-    font-family: $font;
+    font-family: $fontFamily;
     width: 45rem;
     margin: 0 auto;
 }
@@ -9,13 +9,11 @@ body {
 .container {
     padding: 2rem;
     text-align: center;
-    background-color: $bg;
 }
 
 .flexContainer {
     padding: 2rem;
     text-align: center;
-    background-color: $bg;
     display: flex;
 }
 
@@ -79,8 +77,4 @@ h1 {
 .price {
     font-weight: 500;
     color: #DF2027;
-}
-
-.selectedColor {
-    
 }
