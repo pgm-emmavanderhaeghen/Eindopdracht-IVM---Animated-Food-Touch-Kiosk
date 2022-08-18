@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Ingredient.module.scss'
-import order from "../../assets/images/Boccabeker-p-500.png";
+import order from "../../assets/images/boccabeker.svg";
 
 export const Ingredient = ({children}) => {
     return (
