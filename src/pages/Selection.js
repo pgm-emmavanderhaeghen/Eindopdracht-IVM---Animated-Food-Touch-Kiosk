@@ -4,7 +4,7 @@ import Button from "../components/Button/Button";
 import { ROUTES } from "../constants/routes";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
-import order from "../assets/images/Boccabeker-p-500.png";
+import order from "../assets/images/boccabeker.svg";
 import bocca from "../assets/images/bocca-love.png";
 import maria from "../assets/images/maria-soul.png";
 import pesto from "../assets/images/pesto-basta.png";
@@ -105,22 +105,30 @@ const Selection = ({ setShowPopup }) => {
             
             <Button variant="square" color="transparent">
               <img src={bocca} className={styles.food} alt="order" />
-              <p>Bocca Love</p>
+              <p>medium spaghetti <br/>
+                bocca with bacon<br/>
+                parmesan</p>
             </Button>
 
             <Button variant="square" color="transparent">
               <img src={maria} className={styles.food} alt="order" />
-              <p>Maria Soul</p>
+              <p>medium penne <br/>
+                marisol<br/>
+                parmesan</p>
             </Button>
 
             <Button variant="square" color="transparent">
               <img src={pesto} className={styles.food} alt="order" />
-              <p>Pesto Basta</p>
+              <p>medium spaghetti <br/>
+                pesto<br/>
+                parmesan</p>
             </Button>
 
             <Button variant="square" color="transparent">
               <img src={cheese} className={styles.food} alt="order" />
-              <p>Say Cheese</p>
+              <p>medium gluten-free <br/>
+                ham & cheese<br/>
+                parmesan</p>
             </Button>
           </motion.div>
 
@@ -128,13 +136,25 @@ const Selection = ({ setShowPopup }) => {
 
                 <Card>
                   <img src={order} className={styles.beker} alt="order" />
-                  <p>small penne ham & cheese sauce & parmesan</p>
+                  <p>small penne <br/>
+                    ham & cheese<br/>
+                    parmesan</p>
                   <p className={styles.price}>€ 6.50</p>
                 </Card>
 
                 <Card>
                   <img src={order} className={styles.beker} alt="order" />
-                  <p>small penne ham & cheese sauce & parmesan</p>
+                  <p>small penne <br/>
+                    ham & cheese<br/>
+                    parmesan</p>
+                  <p className={styles.price}>€ 6.50</p>
+                </Card>
+
+                <Card>
+                  <img src={order} className={styles.beker} alt="order" />
+                  <p>small penne <br/>
+                    ham & cheese<br/>
+                    parmesan</p>
                   <p className={styles.price}>€ 6.50</p>
                 </Card>
 
