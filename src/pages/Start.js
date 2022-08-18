@@ -60,7 +60,7 @@ function Start() {
 
         <Link to={ROUTES.SELECTION}>
           <Button 
-            variant='square' 
+            variant='big' 
             color='black'
           >
             Eat here <br/>         
@@ -70,7 +70,7 @@ function Start() {
 
         <Link to={ROUTES.SELECTION}>
           <Button 
-            variant='square' 
+            variant='big' 
             color='red'
           >
             Take away <br/>   
