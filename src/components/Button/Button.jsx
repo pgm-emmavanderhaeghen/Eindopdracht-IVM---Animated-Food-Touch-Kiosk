@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Button = ({color= '', variant= '', children, onClick}) => {
     return (
         <motion.button 
-            animate={{ }}
+            whileTap={{ scale: 0.9 }}
             onClick={(onClick)} 
             className={`${styles.btn} ${styles[variant]} ${styles[color]}`}
         >
