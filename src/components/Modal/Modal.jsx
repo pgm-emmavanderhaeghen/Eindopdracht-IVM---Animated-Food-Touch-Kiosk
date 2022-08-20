@@ -1,14 +1,12 @@
 import React from 'react'
 import Button from '../Button/Button'
-import { Ingredient } from '../Ingredient/Ingredient';
+import { IngredientList } from '../IngredientList/IngredientList';
 import styles from "./Modal.module.scss"
 import Heading from '../Heading/Heading';
 import {motion} from 'framer-motion';
 import { useState } from 'react';
-import { OrderContext } from '../../App';
-import { useContext } from 'react';
 
-const Modal = ({data, onClose, children}) => {
+const Modal = ({data, onClose, orderItem, setOrderItem, children}) => {
 
 const modalVariants = {
     hidden: {
@@ -26,6 +24,45 @@ const modalVariants = {
     }
 }
 
+    const [size, setSize] = useState(null);
+    const [pasta, setPasta] = useState(null);
+    const [sauces, setSauces] = useState([]);
+    const [toppings, setToppings] = useState(null);
+
+    const [softdrinks, setSoftdrinks] = useState([]);
+
+    const [sides, setSides] = useState([]);
+    const [saucesToGo, setSaucesToGo] = useState([]);
+
+    const getCurrentState = (subcat) => {
+        switch (subcat) {
+            case 'sizes': 
+            case 'pastas':
+                return `${subcat.substring(0, subcat.length-1)}`;
+                break;
+            default:
+                return subcat;
+                break;
+        }
+    }
+
+    const getSetter = (subcat) => {
+        switch (subcat) {
+            case 'sizes': 
+            case 'pastas':
+                return `set${subcat[0].toUpperCase()}${subcat.substring(1, subcat.length-1)}`;
+                break;
+            default:
+                return`set${subcat[0].toUpperCase()}${subcat.substring(1)}`;
+                break;
+        }
+    }
+
+    const closeModal = () => {
+        setOrderItem();
+        onClose();
+    }
+
     //   // Object.keys(data) => gives us ['sizes', 'pastas', 'sauces'] ~subcat~
     //   // data[subcat].map(item => ()) => gives us [small, medium, large]
 
@@ -35,28 +72,6 @@ const modalVariants = {
     //     {data[subcat].map(item => <li>{item}</li>
     //   </ul>
     //   )
-
-    const [active, setActive] = useState(true);
-    const [order, setOrder] = useContext(OrderContext);
-
-    let tempOrder = [];
-
-    const buttonClicked = (event, name, price) => {
-        
-        setActive(current => !current);
-
-        tempOrder.push({
-            name,
-            price
-        })
-        
-        setOrder(
-            tempOrder
-        )
-        
-        console.log(tempOrder);
-
-    }
 
     return (
         <motion.div 
@@ -70,25 +85,17 @@ const modalVariants = {
             exit="exit"
             className={styles.modalContent} 
             onClick={e => e.stopPropagation()}>
-            {data && typeof data === 'object' ?
-                Object.keys(data)?.map(subcat => (
+            {data && typeof data === 'object' ? Object.keys(data)?.map(subcat => (
                     <>
                         <Heading number="3" color="red">Choose your {subcat}</Heading>
-                        <ul className={styles.list}>
-                            {data[subcat].map(item => 
-                                <li className={active ? styles.ingredientBtn : styles.active} onClick={event => buttonClicked(event, item.name, item.price)}>
-                                    <img src={item.image} className={styles.orderImg} alt="img" />
-                                    <p>{item.name}</p>
-                                    <p className={styles.price}>{item.price}</p>
-                                </li>
-                            )}
-                        </ul>
+                        <IngredientList data={data[subcat]} subcat={subcat} setData={eval(getSetter(subcat))} currentStateData={eval(getCurrentState(subcat))} orderItem={orderItem} />
                     </>
-                )) : data?.map(item => <Ingredient>{item}</Ingredient>)
+            
+                )) : data?.map(item => <IngredientList>{item}</IngredientList>)
             }
 
             <Button 
-                onClick={onClose} 
+                onClick={closeModal} 
                 color='red' 
             >
                 Put it on my list!
