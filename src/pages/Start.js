@@ -3,6 +3,7 @@ import {ReactComponent as Smile} from "../assets/images/bocca-smile.svg"
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import Button from "../components/Button/Button"
+import Loader from "../components/Loader/Loader"
 import { ROUTES } from "../constants/routes";
 import Heading from "../components/Heading/Heading";
 import {motion} from 'framer-motion';
@@ -79,6 +80,8 @@ function Start() {
         </Link>   
               
       </div>
+
+      <Loader />
     </motion.div>
   );
 }
