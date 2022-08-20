@@ -13,7 +13,7 @@
             },
             {
                 "name": "almdudler",
-                "image": "https://static.delhaize.be/medias/sys_master/ha6/hb1/11027830767646.jpg",
+                "image": "https://www.worldofsweets.de/out/pictures/master/product/1/almdudler.jpg",
                 "price": "€3"
             },
             {
@@ -126,7 +126,7 @@
         "sauces": [
             {
                 "name": "bocca",
-                "image": "",
+                "image": "https://foodbyjonister.com/wp-content/uploads/2020/07/RedPestoPasta7-975x1300.jpg",
                 "summary": "Mildly spicy tomato cream sauce with or without bacon."
             },
             {
@@ -156,22 +156,22 @@
             },
             {
                 "name": "currysauce with smoked salmon",
-                "image": "",
+                "image": "https://i.pinimg.com/originals/bf/2c/34/bf2c34cc7819353b8ef30c59be582583.jpg",
                 "summary": "Mild spicy."
             },
             {
                 "name": "arrabbiata",
-                "image": "",
+                "image": "https://www.insidetherustickitchen.com/wp-content/uploads/2020/05/Pasta-Arrabbiata-2-1200px-Inside-the-Rustic-Kitchen-1.jpg",
                 "summary": "Spicy tomato sauce."
             },
             {
                 "name": "green pesto",
-                "image": "",
+                "image": "http://greenbeandelivery.com/blog/wp-content/uploads/2020/08/DSF7389-e1597091759861.jpg",
                 "summary": "Pine nuts, parmesan, basil, garlic  & olive oil."
             },
             {
                 "name": "red pesto",
-                "image": "",
+                "image": "https://foodbyjonister.com/wp-content/uploads/2020/07/RedPestoPasta4-scaled.jpg",
                 "summary": "Pine nuts, parmesan, basil, sun-dried tomatoes & olive oil."
             }
         ],
@@ -184,7 +184,7 @@
             {
                 "name": "extra mmental",
                 "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thedailymeal.com%2Fsites%2Fdefault%2Ffiles%2Fslides%2F7-emmental-shutterstock_141445072.jpg&f=1&nofb=1",
-                "price": "+ 0,50"
+                "price": "+ €0,50"
             },
             {
                 "name": "parmesan",
@@ -198,67 +198,67 @@
             },
             {
                 "name": "grated mozzarella",
-                "image": "",
+                "image": "https://gossiponthis.com/wp-content/uploads/2015/03/shredded-mozzarella-cheese.jpg",
                 "price": "+ €1,60"
             },
             {
                 "name": "raspadura",
-                "image": "",
+                "image": "https://guffantiformaggi.com/wp-content/uploads/2017/08/guffanti-raspadura.jpg",
                 "price": "+ €1,90"
             },
             {
                 "name": "feta",
-                "image": "",
+                "image": "http://www.naturopataonline.org/wp-content/uploads/2017/08/fetagreca.jpg",
                 "price": "+ €1,70"
             },
             {
                 "name": "bacon",
-                "image": "",
+                "image": "https://longislandweekly.com/wp-content/uploads/2020/02/Bowl-of-Bacon.png",
                 "price": "+ €1,60"
             },
             {
                 "name": "ham",
-                "image": "",
+                "image": "https://richmeats.capetown/wp-content/uploads/2017/03/Sliced-Sandwich-Ham.jpg",
                 "price": "+ €1,60"
             },
             {
                 "name": "salmon",
-                "image": "",
+                "image": "https://www.beckandbulow.com/wp-content/uploads/2020/07/181358_00_2x.jpg",
                 "price": "+ €2,50"
             },
             {
                 "name": "tuna",
-                "image": "",
+                "image": "https://www.seafarersinc.com/wp-content/uploads/2015/09/tunaicon.jpg",
                 "price": "+ €2,50"
             },
             {
                 "name": "extra sauce",
-                "image": "",
+                "image": "https://downshiftology.com/wp-content/uploads/2014/11/Marinara-Sauce.jpg",
                 "price": "+ €1,50"
             },
             {
                 "name": "sun dried tomatoes",
-                "image": "",
+                "image": "https://pacificcoastproducers.com/wp-content/uploads/2021/02/TXSDJB-1024x1024.png",
                 "price": "+ €1,70"
             },
             {
                 "name": "mozzarella balls",
-                "image": "",
+                "image": "https://fthmb.tqn.com/7ij8KWurUuc2pKBONg-AispaT84=/4830x3623/filters:fill(auto,1)/marinated-mozzarella-cheese-balls-83173090-5818e9c63df78cc2e8e43e4f.jpg",
                 "price": "+ €1,70"
             },
             {
                 "name": "pine nuts",
-                "image": "",
+                "image": "https://img3.21food.com/img/product/2020/11/18/food305228-1605711387014142.jpg",
                 "price": "+ €1,50"
             },
             {
                 "name": "rocket salad",
-                "image": "",
+                "image": "https://dietdelights.com.qa/wp-content/uploads/2017/07/Rocket-salad.jpg",
                 "price": "+ €0,50"
             },
             {
                 "name": "olives",
-                "image": "",
+                "image": "https://www.mysuburbankitchen.com/wp-content/uploads/2018/11/warm-marinated-olives-4.jpg",
                 "price": "+ €1,50"
             }
         ]
@@ -267,71 +267,71 @@
         "sides": [
             {
                 "name": "basic salad",
-                "image": "",
+                "image": "https://ditchthewheat.com/wp-content/uploads/2012/06/SALAD-31.jpg",
                 "price": "€6"
             },
             {
                 "name": "soup to go",
-                "image": "",
+                "image": "https://www.blountfinefoods.com/templates/yootheme/cache/HTG_lasagna-0ece6986.jpeg",
                 "price": "€3"
             },
             {
                 "name": "tiramisu of the house",
-                "image": "",
+                "image": "https://www.bellaswyoming.com/uploads/5/1/4/5/5145028/s941587355630731505_p20_i1_w1200.jpeg",
                 "price": "€4"
             },
             {
                 "name": "chocolat mousse",
-                "image": "",
+                "image": "https://www.garnishandglaze.com/wp-content/uploads/2019/02/chocolate-mousse-3.jpg",
                 "price": "€4"
             }
         ],
         "saucesToGo": [
             {
                 "name": "bocca",
-                "image": "",
+                "image": "https://foodbyjonister.com/wp-content/uploads/2020/07/RedPestoPasta7-975x1300.jpg",
                 "price": "€7,50",
                 "amount": "0.50L"
             },
             {
                 "name": "bolognese",
-                "image": "",
+                "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.healthyfood.com%2Fwp-content%2Fuploads%2F2016%2F11%2FBolognese-sauce-iStock-485714898.jpg&f=1&nofb=1",
                 "price": "€7",
                 "amount": "0.50L"            
             },
             {
                 "name": "cheese & ham",
-                "image": "",
+                "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthesaltymarshmallow.com%2Fwp-content%2Fuploads%2F2019%2F04%2Finstant-pot-pasta2.jpg&f=1&nofb=1",
                 "price": "€7",
                 "amount": "0.50L"            
             },
             {
                 "name": "veggie",
-                "image": "",
+                "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.healthygffamily.com%2Fwp-content%2Fuploads%2F2019%2F02%2FEBB27FFD-702B-4CE1-AA6D-A32A2333CE78-scaled.jpg&f=1&nofb=1",
                 "price": "€9",
                 "amount": "0.50L"
             },
             {
                 "name": "marisol",
-                "image": "",
+                "image": "https://f.roocdn.com/images/menus/31231/header-image.jpg?width=1200&height=630&auto=webp&format=jpg&fit=crop&v=1526983841",
                 "price": "€9",
                 "amount": "0.50L"
             },
             {
                 "name": "four cheeses",
-                "image": "",
+                "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.jocooks.com%2Fwp-content%2Fuploads%2F2020%2F07%2Fcreamy-goat-cheese-pasta-1-3.jpg&f=1&nofb=1",
                 "price": "€7",
                 "amount": "0.50L"
             },
             {
                 "name": "currysauce with smoked salmon",
-                "image": "",
+                "image": "https://i.pinimg.com/originals/bf/2c/34/bf2c34cc7819353b8ef30c59be582583.jpg",
                 "price": "€9",
                 "amount": "0.50L"
             },
             {
                 "name": "arrabbiata",
-                "image": "",
+                "image": "https://www.insidetherustickitchen.com/wp-content/uploads/2020/05/Pasta-Arrabbiata-2-1200px-Inside-the-Rustic-Kitchen-1.jpg",
                 "price": "€7,50",
                 "amount": "0.50L"
             }
