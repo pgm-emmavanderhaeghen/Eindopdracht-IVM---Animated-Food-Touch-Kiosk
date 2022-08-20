@@ -1,15 +1,14 @@
 import React from 'react'
-import { Ingredient } from '../Ingredient/Ingredient'
+import { IngredientItem } from '../IngredientItem/IngredientItem'
 import styles from './IngredientList.module.scss'
 
 
-const IngredientList = ({children}) => {
+export const IngredientList = ({data, subcat, setData, currentStateData, orderItem, props}) => {
     return (
-      <ul className={styles.list}>
-          <Ingredient></Ingredient>
-      </ul>
+        <ul className={styles.list}>
+            {data.map((item, index) => 
+                <IngredientItem item={item} key={`${subcat}${index}`} subcat={subcat} updateData={setData} currentStateData={currentStateData} orderItem={orderItem} />
+            )}
+        </ul>
     )
-  }
-  
-
-export default IngredientList
+}

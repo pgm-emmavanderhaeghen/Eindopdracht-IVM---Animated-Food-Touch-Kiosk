@@ -9,3 +9,15 @@ h4 {
     color: #DF2027;
 }
 }
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    word-wrap: break-word;
+}
+
+.price {
+    color: rgb(167, 167, 167);
+}
