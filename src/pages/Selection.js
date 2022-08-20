@@ -1,22 +1,24 @@
 import styles from "../App.module.scss";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../components/Button/Button";
 import { ROUTES } from "../constants/routes";
+import Button from "../components/Button/Button";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
+import Heading from "../components/Heading/Heading";
+import Modal from "../components/Modal/Modal";
+import { BOCCA_API } from "../constants/api";
+import useFetch from "../hooks/useFetch";
+import {motion} from 'framer-motion';
+import { useIdleTimer } from "react-idle-timer";
+
+// images
+import logo from "../assets/images/logo.svg";
 import order from "../assets/images/boccabeker.svg";
 import bocca from "../assets/images/bocca-love.png";
 import maria from "../assets/images/maria-soul.png";
 import pesto from "../assets/images/pesto-basta.png";
 import cheese from "../assets/images/say-cheese.png";
-import Modal from "../components/Modal/Modal";
-import React, { useState } from "react";
-import { BOCCA_API } from "../constants/api";
-import useFetch from "../hooks/useFetch";
-import Heading from "../components/Heading/Heading";
-import logo from "../assets/images/logo.svg";
-import {motion} from 'framer-motion';
-import { useIdleTimer } from "react-idle-timer";
 
 const Selection = ({ setShowPopup }) => {
 
@@ -35,6 +37,7 @@ const Selection = ({ setShowPopup }) => {
     setShowModal(show);
     setFilteredData(response[category]);
   };
+  // category is defined in the Button component onClick function below
 
   // documentation: https://idletimer.dev/docs/api/use-idle-timer
   const onIdle = () => {
@@ -42,9 +45,6 @@ const Selection = ({ setShowPopup }) => {
   }
   const onActive = (event) => {}
   const idleTimer = useIdleTimer({onIdle, onActive, timeout: 30000})
-
-
-  // category is defined in the Button component onClick function below
 
   const containerVariants = {
     hidden: {
@@ -61,6 +61,15 @@ const Selection = ({ setShowPopup }) => {
       transition: { ease: 'easeInOut'}
     }
   }
+
+  // Tried to animate the svg logo in the top, but didn't work.
+  // const svgVariants = {
+  //   hidden: { rotate: -180 },
+  //   visible: {
+  //     rotate: 0,
+  //     transition: { duration: 1}
+  //   }
+  // }
 
   return (
     <motion.div 
