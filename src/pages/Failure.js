@@ -32,7 +32,7 @@ function Failure() {
         <Heading number="1">Oops, something <br></br> went wrong!</Heading>
 
         <p>Hmm … there seems to be <br></br> a little problem, a member <br></br> of staff  will have a look soon.</p>
-        <p className={styles.red}>Hang on there</p>
+        <p className={styles.red}>Hang in there</p>
         
         <img className={styles.round} src={failure} alt="failure" />
 
