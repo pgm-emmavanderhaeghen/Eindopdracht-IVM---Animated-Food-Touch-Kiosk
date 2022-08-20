@@ -19,6 +19,7 @@ import bocca from "../assets/images/bocca-love.png";
 import maria from "../assets/images/maria-soul.png";
 import pesto from "../assets/images/pesto-basta.png";
 import cheese from "../assets/images/say-cheese.png";
+import { OrderItem } from "../components/OrderItem/OrderItem";
 
 const Selection = ({ setShowPopup }) => {
 
@@ -34,17 +35,27 @@ const Selection = ({ setShowPopup }) => {
   // }, [setShowPopup])
 
   const handleModal = (show, category) => {
+    setOrderItem({  
+      size: {},
+      pasta: {},
+      sauces: [],
+      toppings: [],
+      softdrinks: [],
+      sides: [],
+      saucesToGo: [],
+  });
     setShowModal(show);
     setFilteredData(response[category]);
   };
   // category is defined in the Button component onClick function below
 
   // documentation: https://idletimer.dev/docs/api/use-idle-timer
-  const onIdle = () => {
-    setShowPopup(true);
-  }
-  const onActive = (event) => {}
-  const idleTimer = useIdleTimer({onIdle, onActive, timeout: 30000})
+  // const onIdle = () => {
+  //   setShowPopup(true);
+  // }
+  // const onActive = (event) => {}
+  // // eslint-disable-next-line no-unused-vars
+  // const idleTimer = useIdleTimer({onIdle, onActive, timeout: 30000})
 
   const containerVariants = {
     hidden: {
@@ -71,6 +82,12 @@ const Selection = ({ setShowPopup }) => {
   //   }
   // }
 
+  const [orderItem, setOrderItem] = useState({});
+
+  const addOrderItem = () => {
+    <OrderItem data={orderItem} />
+  };
+
   return (
     <motion.div 
     variants={containerVariants}
@@ -84,8 +101,13 @@ const Selection = ({ setShowPopup }) => {
         <>
           {showModal && (
               <Modal 
-              onClose={() => setShowModal(false)} 
-              data={filteredData}></Modal>
+              onClose={() => {
+                addOrderItem();
+                setShowModal(false)}
+              } 
+              data={filteredData}
+              orderItem={orderItem}
+              setOrderItem={setOrderItem}></Modal>
           )}
 
           <motion.div 
