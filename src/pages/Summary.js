@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
 import { ROUTES } from "../constants/routes";
 import Card from "../components/Card/Card";
-import order from "../assets/images/boccabeker.svg"
+import order from "../assets/images/svg/boccabeker.svg"
 import Heading from "../components/Heading/Heading";
 import {motion} from 'framer-motion';
 

@@ -1,5 +1,5 @@
 import styles from "../App.module.scss";
-import {ReactComponent as Smile} from "../assets/images/bocca-smile.svg"
+import {ReactComponent as Smile} from "../assets/images/svg/bocca-smile.svg"
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import Button from "../components/Button/Button"

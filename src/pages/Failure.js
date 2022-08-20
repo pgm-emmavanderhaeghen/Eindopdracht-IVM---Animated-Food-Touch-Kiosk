@@ -1,6 +1,6 @@
 import styles from "../App.module.scss";
 import Heading from "../components/Heading/Heading";
-import failure from "../assets/images/failure.gif"
+import failure from "../assets/images/gif/failure.gif"
 import {motion} from 'framer-motion'
 
 const containerVariants = {

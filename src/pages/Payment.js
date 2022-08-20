@@ -1,5 +1,5 @@
 import styles from "../App.module.scss";
-import loading from "../assets/images/order-being-prepared.gif"
+import loading from "../assets/images/gif/order-being-prepared.gif"
 import Heading from "../components/Heading/Heading";
 import {motion} from 'framer-motion'
 

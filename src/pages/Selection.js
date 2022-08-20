@@ -13,8 +13,8 @@ import {motion} from 'framer-motion';
 import { useIdleTimer } from "react-idle-timer";
 
 // images
-import logo from "../assets/images/logo.svg";
-import order from "../assets/images/boccabeker.svg";
+import logo from "../assets/images/svg/logo.svg";
+import order from "../assets/images/svg/boccabeker.svg";
 import bocca from "../assets/images/bocca-love.png";
 import maria from "../assets/images/maria-soul.png";
 import pesto from "../assets/images/pesto-basta.png";

@@ -2,7 +2,7 @@ import styles from "../App.module.scss";
 import Button from "../components/Button/Button";
 import { Link } from "react-router-dom";
 import Heading from "../components/Heading/Heading";
-import notFound from "../assets/images/notfound.gif"
+import notFound from "../assets/images/gif/notfound.gif"
 import {motion} from 'framer-motion'
 
 const containerVariants = {
