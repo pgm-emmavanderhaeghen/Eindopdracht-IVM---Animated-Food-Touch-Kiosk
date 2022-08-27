@@ -1,12 +1,16 @@
-import styles from "../App.module.scss";
 import { Link } from "react-router-dom";
-import Button from "../components/Button/Button";
 import { ROUTES } from "../constants/routes";
-import Card from "../components/Card/Card";
-import order from "../assets/images/svg/boccabeker.svg"
-import Heading from "../components/Heading/Heading";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
+// components
+import Button from "../components/Button/Button";
+import Heading from "../components/Heading/Heading";
+import Card from "../components/Card/Card";
+
+// styling
+import styles from "../App.module.scss";
+
+// animation
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -30,42 +34,25 @@ function Summary() {
     initial="hidden"
     animate="visible"
     exit="exit"
-    className={styles.container}>      
+    className={styles.container}>
+
       <div className={styles.m4}>
 
-      <Heading number="1">Is this what you ordered?</Heading>
+        {/* Heading component */}
+        <Heading number="1">Is this what you ordered?</Heading>
 
         <Card variant="long" color="grey">
-          <img src={order} className={styles.beker} alt="order" />
-          <ul>
-            <li>small penne</li>
-            <li>ham & cheese sauce</li>
-            <li>& parmesan</li>
-          </ul>
-          <p className={styles.price}>€ 6.50</p>
+          <p>small penne ham & cheese parmesan</p>
+          <p className={styles.price}>€6.50</p>
         </Card>
 
         <Card variant="long" color="grey">
-          <img src={order} className={styles.beker} alt="order" />
-          <ul>
-            <li>large gluten-free</li>
-            <li>marisol sauce</li>
-            <li>with bacon</li>
-          </ul>
-          <p className={styles.price}>€ 8.50</p>
+          <p>large gluten-free bocca parmesan</p>
+          <p className={styles.price}>€8.50</p>
         </Card>
 
-        <Card variant="long" color="grey">
-          <img src={order} className={styles.beker} alt="order" />
-          <ul>
-            <li>medium spaghetti</li>
-            <li>arrabbiata sauce</li>
-            <li>& mozzarella balls</li>
-          </ul>
-          <p className={styles.price}>€ 7.50</p>
-        </Card>
-
-        <Heading number="2">Your total is<span className={styles.price}> € 47</span> </Heading>
+        {/* Heading component */}
+        <Heading number="2">Your total is<span className={styles.price}> € 15</span> </Heading>
 
           <Link to={ROUTES.SELECTION}>
             <Button>
@@ -78,7 +65,7 @@ function Summary() {
               Okay great! I'll pay now <br/>         
             </Button>
           </Link>
-          
+
       </div>
     </motion.div>
   );
