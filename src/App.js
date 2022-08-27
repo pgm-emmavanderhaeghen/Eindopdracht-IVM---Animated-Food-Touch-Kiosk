@@ -1,5 +1,10 @@
+import React, { useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { ROUTES } from "./constants/routes";
+import { AnimatePresence } from "framer-motion"
+import Popup from "./components/Timeoutpopup/Timeoutpopup";
+
+// pages
 import Start from "./pages/Start";
 import Selection from "./pages/Selection";
 import Summary from "./pages/Summary";
@@ -7,21 +12,17 @@ import Payment from "./pages/Payment";
 import NotFound from "./pages/NotFound";
 import Success from "./pages/Success";
 import Failure from "./pages/Failure";
-import React, { useState } from "react";
-import { AnimatePresence } from "framer-motion"
-import Popup from "./components/Timeoutpopup/Timeoutpopup";
 
 export const orderContext = React.createContext({
   order: {},
   setOrder: () => {},
 })
 
-
 function App() {
-  const location = useLocation();
   const [showPopup, setShowPopup] = useState(false);
   const [order, setOrder] = useState({});
   const value = {order, setOrder}
+  const location = useLocation();
 
   return (
       <orderContext.Provider value={value}>
