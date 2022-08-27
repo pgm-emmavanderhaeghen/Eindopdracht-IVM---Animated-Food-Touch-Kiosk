@@ -1,13 +1,20 @@
-import styles from "../App.module.scss";
-import {ReactComponent as Smile} from "../assets/images/svg/bocca-smile.svg"
 import { Link } from "react-router-dom";
+import { ROUTES } from "../constants/routes";
+import { motion } from 'framer-motion';
+
+// components
+import Heading from "../components/Heading/Heading";
 import Hero from "../components/Hero/Hero";
 import Button from "../components/Button/Button"
 import Loader from "../components/Loader/Loader"
-import { ROUTES } from "../constants/routes";
-import Heading from "../components/Heading/Heading";
-import {motion} from 'framer-motion';
 
+// styling
+import styles from "../App.module.scss";
+
+// images
+import { ReactComponent as Smile } from "../assets/images/svg/bocca-smile.svg"
+
+// animation
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -31,18 +38,19 @@ function Start() {
     initial="hidden"
     animate="visible"
     exit="exit"
-    className={styles.container}
-    >  
+    className={styles.container}>  
 
+    {/* Hero component */}
     <Hero />
 
       <motion.div className={styles.m4}
       animate= {{ marginTop: 20 }}
-      transition={{ delay: 1 }}
-      >
+      transition={{ delay: 1 }}>
 
+        {/* Heading component */}
         <Heading number="1">Welcome at bocca</Heading>
-        <p className={styles.text} >
+
+        <p className={styles.text}>
           Bocca is a fresh, quick and delicious <motion.strong animate={{color: '#DF2027'}} transition={{ delay: 1 }}> pastabar </motion.strong>  
           located in Bruges & Ghent. Check out what we got on the menu.
         </p>
@@ -60,20 +68,20 @@ function Start() {
       <div className={styles.m4}>
 
         <Link to={ROUTES.SELECTION}>
+          {/* Button component */}
           <Button 
             variant='big' 
-            color='black'
-          >
+            color='black'>
             Eat here <br/>         
             <Smile/>
           </Button>
         </Link>
 
         <Link to={ROUTES.SELECTION}>
+          {/* Button component */}
           <Button 
             variant='big' 
-            color='red'
-          >
+            color='red'>
             Take away <br/>   
             <Smile/>
           </Button>
@@ -81,7 +89,9 @@ function Start() {
               
       </div>
 
+      {/* Loader component */}
       <Loader />
+
     </motion.div>
   );
 }
