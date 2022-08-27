@@ -1,8 +1,14 @@
-import styles from "../App.module.scss";
+import { motion } from 'framer-motion'
+// components
 import Heading from "../components/Heading/Heading";
-import success from "../assets/images/gif/success.gif"
-import {motion} from 'framer-motion'
 
+// styling
+import styles from "../App.module.scss";
+
+// gif
+import success from "../assets/images/gif/success.gif"
+
+// animation
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -27,13 +33,12 @@ function Success() {
     animate="visible"
     exit="exit"
     className={styles.container}>      
+      
       <div className={styles.m4}>
 
         <Heading number="1">That's a wrap!</Heading>
-
         <p>Everything went well and we are <br></br> making your order as we speak.</p>
         <p className={styles.green}>Enjoy your meal</p>
-
         <img className={styles.round} src={success} alt="success" />
 
       </div>
