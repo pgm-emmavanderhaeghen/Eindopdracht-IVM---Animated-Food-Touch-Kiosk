@@ -23,6 +23,16 @@ import { OrderItem } from "../components/OrderItem/OrderItem";
 
 const Selection = ({ setShowPopup }) => {
 
+  // documentation: https://idletimer.dev/docs/api/use-idle-timer
+  // const onIdle = () => {
+  //   setShowPopup(true);
+  // }
+
+  // const onActive = (event) => {}
+
+  // eslint-disable-next-line no-unused-vars
+  // const idleTimer = useIdleTimer({onIdle, onActive, timeout: 30000})
+
   const { response, error, loading } = useFetch(BOCCA_API);
   const [showModal, setShowModal] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
@@ -49,13 +59,19 @@ const Selection = ({ setShowPopup }) => {
   };
   // category is defined in the Button component onClick function below
 
-  // documentation: https://idletimer.dev/docs/api/use-idle-timer
-  // const onIdle = () => {
-  //   setShowPopup(true);
+  // Tried to animate the svg logo in the top, but didn't work.
+  // const svgVariants = {
+  //   hidden: { rotate: -180 },
+  //   visible: {
+  //     rotate: 0,
+  //     transition: { duration: 1}
+  //   }
   // }
-  // const onActive = (event) => {}
-  // // eslint-disable-next-line no-unused-vars
-  // const idleTimer = useIdleTimer({onIdle, onActive, timeout: 30000})
+
+  const [orderItem, setOrderItem] = useState({
+    size: "small",
+    pasta: "penne"
+  });
 
   const containerVariants = {
     hidden: {
@@ -73,20 +89,15 @@ const Selection = ({ setShowPopup }) => {
     }
   }
 
-  // Tried to animate the svg logo in the top, but didn't work.
-  // const svgVariants = {
-  //   hidden: { rotate: -180 },
-  //   visible: {
-  //     rotate: 0,
-  //     transition: { duration: 1}
-  //   }
-  // }
-
-  const [orderItem, setOrderItem] = useState({});
 
   const addOrderItem = () => {
-    <OrderItem data={orderItem} />
+    setOrderItem({
+    })
   };
+
+  const createOrderItem = () => {
+    <OrderItem data={orderItem} />
+  }
 
   return (
     <motion.div 
@@ -103,6 +114,7 @@ const Selection = ({ setShowPopup }) => {
               <Modal 
               onClose={() => {
                 addOrderItem();
+                createOrderItem();
                 setShowModal(false)}
               } 
               data={filteredData}
@@ -175,8 +187,15 @@ const Selection = ({ setShowPopup }) => {
           </motion.div>
 
           <Sidebar>
+              {console.log(orderItem)}
+                {OrderItem!==undefined ? <div>
+                  <Card>
+                    <p>
+                      {`${orderItem.size} ${orderItem.pasta}`}
+                    </p>
+                  </Card></div> : <p>undefined</p>} 
 
-                <Card>
+                {/* <Card>
                   <img src={order} className={styles.beker} alt="order" />
                   <p>small penne <br/>
                     ham & cheese<br/>
@@ -190,15 +209,7 @@ const Selection = ({ setShowPopup }) => {
                     ham & cheese<br/>
                     parmesan</p>
                   <p className={styles.price}>€ 6.50</p>
-                </Card>
-
-                <Card>
-                  <img src={order} className={styles.beker} alt="order" />
-                  <p>small penne <br/>
-                    ham & cheese<br/>
-                    parmesan</p>
-                  <p className={styles.price}>€ 6.50</p>
-                </Card>
+                </Card> */}
 
           </Sidebar>
         </>

@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 import { useContext } from 'react';
-import { OrderContext } from '../../App';
+import { orderContext } from '../../App'
 import Button from '../Button/Button'
 import styles from "./Counter.module.scss"
 
 const Counter = ({ item, defaultAmount = 1 }) => {
     const [amount, setAmount] = useState(defaultAmount);
-    const [order, setOrder] = useContext(OrderContext);
+    // const [order, setOrder] = useContext(orderContext);
 
     const setCartContext = (val) => {
         setAmount(val);
-        setOrder({
-            ...order, 
-            [item.id]: {...order, amount: val}
-        });
+        // setOrder({
+        //     ...order, 
+        //     [item.id]: {...order, amount: val}
+        // });
     }
 
-    console.log(order);
+    // console.log(order);
 
     const detractAmount = () => {
         if (amount <= 1) {

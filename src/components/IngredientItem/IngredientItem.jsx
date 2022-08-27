@@ -9,8 +9,6 @@ export const IngredientItem = ({item, subcat, updateData, id, currentStateData, 
     const [active, setActive] = useState(true);
     // const [order, setOrder] = useContext(OrderContext);
 
-    // let tempOrder = [];
-
     const buttonClicked = (selectedItem) => {
         setActive(current => !current);
 
@@ -46,7 +44,11 @@ export const IngredientItem = ({item, subcat, updateData, id, currentStateData, 
     }
 
     return (
-        <li data-id={item.name} className={`${subcat} ${active ? styles.ingredientBtn : `active ${styles.active}`}`} onClick={event => buttonClicked(item)}>
+        <li 
+        key={item.key}
+        data-id={item.name} 
+        className={`${subcat} ${active ? styles.ingredientBtn : `active ${styles.active}`}`} 
+        onClick={event => buttonClicked(item)}>
             <img src={item.image} className={styles.orderImg} alt="img" />
             <p>{item.name}</p>
             <p className={styles.price}>{item.price}</p>

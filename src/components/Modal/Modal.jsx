@@ -5,6 +5,8 @@ import styles from "./Modal.module.scss"
 import Heading from '../Heading/Heading';
 import {motion} from 'framer-motion';
 import { useState } from 'react';
+// import { orderContext } from '../../App'
+// import { useContext } from 'react';
 
 const Modal = ({data, onClose, orderItem, setOrderItem, children}) => {
 
@@ -22,12 +24,16 @@ const modalVariants = {
         y: -400,
         transition: { ease: 'easeInOut'}
     }
-}
+}   
+
+// for context
+    // const [order, setOrder] = useContext(orderContext);
+    // const value = {order, setOrder};
 
     const [size, setSize] = useState(null);
     const [pasta, setPasta] = useState(null);
     const [sauces, setSauces] = useState([]);
-    const [toppings, setToppings] = useState(null);
+    const [toppings, setToppings] = useState([]);
 
     const [softdrinks, setSoftdrinks] = useState([]);
 
@@ -73,37 +79,49 @@ const modalVariants = {
     //   </ul>
     //   )
 
+    // trying to figuere out stupid context
+    // <orderContext.Provider value={value}>
+        //     {({order, setOrder}) => (
+
     return (
-        <motion.div 
-        className={styles.modal} 
-        onClick={onClose}>
-
-            <motion.div 
-            variants={modalVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className={styles.modalContent} 
-            onClick={e => e.stopPropagation()}>
-            {data && typeof data === 'object' ? Object.keys(data)?.map(subcat => (
-                    <>
-                        <Heading number="3" color="red">Choose your {subcat}</Heading>
-                        <IngredientList data={data[subcat]} subcat={subcat} setData={eval(getSetter(subcat))} currentStateData={eval(getCurrentState(subcat))} orderItem={orderItem} />
-                    </>
-            
-                )) : data?.map(item => <IngredientList>{item}</IngredientList>)
-            }
-
-            <Button 
-                onClick={closeModal} 
-                color='red' 
-            >
-                Put it on my list!
-            </Button>
-
-            </motion.div>
-        </motion.div>
-    )
+                        <motion.div 
+                        className={styles.modal} 
+                        onClick={onClose}>
+                
+                            <motion.div 
+                            variants={modalVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            className={styles.modalContent} 
+                            onClick={e => e.stopPropagation()}>
+                            {data && typeof data === 'object' ? Object.keys(data)?.map((subcat, index) => (
+                                    <div key={index}>
+                                        <Heading number="3" color="red">Choose your {subcat}</Heading>
+                                        <IngredientList
+                                        data={data[subcat]} 
+                                        subcat={subcat} 
+                                        setData={parseInt(getSetter(subcat))} 
+                                        currentStateData={parseInt(getCurrentState(subcat))} 
+                                        orderItem={orderItem} />
+                                    </div>
+                            
+                                )) : data?.map((item, index) => <IngredientList key={index}>{item}</IngredientList>)
+                            }
+                
+                            <Button 
+                                onClick={closeModal} 
+                                color='red' 
+                            >
+                                Put it on my list!
+                            </Button>
+                
+                            </motion.div>
+                        </motion.div>
+    );
 }
+
+        //     )}
+        // </orderContext.Provider>
 
 export default Modal

@@ -7,18 +7,24 @@ import Payment from "./pages/Payment";
 import NotFound from "./pages/NotFound";
 import Success from "./pages/Success";
 import Failure from "./pages/Failure";
-import { createContext, useState } from "react";
+import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion"
 import Popup from "./components/Timeoutpopup/Timeoutpopup";
-export const OrderContext = createContext();
+
+export const orderContext = React.createContext({
+  order: {},
+  setOrder: () => {},
+})
+
 
 function App() {
   const location = useLocation();
-  const [order, setOrder] = useState({});
   const [showPopup, setShowPopup] = useState(false);
+  const [order, setOrder] = useState({});
+  const value = {order, setOrder}
 
   return (
-      <OrderContext.Provider value={[order, setOrder]}>
+      <orderContext.Provider value={value}>
         <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
         <AnimatePresence exitBeforeEnter onExitComplete={() => setShowPopup(false)}>
         <Routes location={location} key={location.key}>
@@ -31,7 +37,7 @@ function App() {
           <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
         </Routes>
         </AnimatePresence>
-      </OrderContext.Provider>
+      </orderContext.Provider>
   );
 }
 

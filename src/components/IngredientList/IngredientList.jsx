@@ -7,7 +7,13 @@ export const IngredientList = ({data, subcat, setData, currentStateData, orderIt
     return (
         <ul className={styles.list}>
             {data.map((item, index) => 
-                <IngredientItem item={item} key={`${subcat}${index}`} subcat={subcat} updateData={setData} currentStateData={currentStateData} orderItem={orderItem} />
+                <IngredientItem 
+                item={item} 
+                key={`${subcat}${index}`} 
+                subcat={subcat} 
+                updateData={setData} 
+                currentStateData={currentStateData} 
+                orderItem={orderItem} />
             )}
         </ul>
     )
