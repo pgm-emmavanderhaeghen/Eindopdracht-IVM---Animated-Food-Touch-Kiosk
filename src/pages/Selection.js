@@ -12,6 +12,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import Heading from "../components/Heading/Heading";
 import Modal from "../components/Modal/Modal";
+import { OrderItem } from "../components/OrderItem/OrderItem";
 
 // styling
 import styles from "../App.module.scss";
@@ -22,7 +23,6 @@ import bocca from "../assets/images/bocca-love.png";
 import maria from "../assets/images/maria-soul.png";
 import pesto from "../assets/images/pesto-basta.png";
 import cheese from "../assets/images/say-cheese.png";
-import { OrderItem } from "../components/OrderItem/OrderItem";
 
 const Selection = ({ setShowPopup }) => {
   // The timer when user is being Idle + popup
@@ -66,18 +66,19 @@ const Selection = ({ setShowPopup }) => {
       softdrinks: [],
       sides: [],
       saucesToGo: [],
-  });
+    });
     setShowModal(show);
     setFilteredData(response[category]);
     // category is defined in the Button component onClick function below
   };
 
+  
   // useState for showing the orderItems in the Sidebar component
   const [orderItem, setOrderItem] = useState({
-    size: "small",
-    pasta: "penne",
-    sauces: "bocca",
-    toppings: "emmental"
+    // size: "small",
+    // pasta: "penne",
+    // sauces: "bocca",
+    // toppings: "emmental"
   });
 
   // animation
@@ -121,7 +122,8 @@ const Selection = ({ setShowPopup }) => {
               } 
               data={filteredData}
               orderItem={orderItem}
-              setOrderItem={setOrderItem}>
+              setOrderItem={setOrderItem}
+              >
               </Modal>
           )}
 
@@ -194,7 +196,7 @@ const Selection = ({ setShowPopup }) => {
             {OrderItem!==undefined ? 
               <div>
                 <Card>
-                  <p>{`${orderItem.size} ${orderItem.pasta} ${orderItem.sauces} ${orderItem.toppings}`}</p>
+                  {/* <p>{`${orderItem.size} ${orderItem.pasta} ${orderItem.sauces} ${orderItem.toppings}`}</p> */}
                   <p className={styles.price}>€ 6.50</p>
                 </Card>
               </div> : <p>undefined</p>
