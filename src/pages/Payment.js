@@ -1,8 +1,15 @@
-import styles from "../App.module.scss";
-import loading from "../assets/images/gif/order-being-prepared.gif"
-import Heading from "../components/Heading/Heading";
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
+// components
+import Heading from "../components/Heading/Heading";
+
+// styling
+import styles from "../App.module.scss";
+
+// gif
+import loading from "../assets/images/gif/order-being-prepared.gif"
+
+// animation
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -26,9 +33,10 @@ function Payment() {
     initial="hidden"
     animate="visible"
     exit="exit"
-    className={styles.container}>      
-      <div className={styles.m4}>
+    className={styles.container}>   
 
+      <div className={styles.m4}>
+        {/* Heading component */}
         <Heading number="1">Almost done!</Heading>
 
         <img className={styles.round} src={loading} alt="order" />
