@@ -57,6 +57,18 @@ const Selection = ({ setShowPopup }) => {
   //   }
   // }
 
+  // useState for showing the orderItems in the Sidebar component
+  const [orderItem, setOrderItem] = useState({
+    size: "small",
+    pasta: "penne",
+    sauces: "bocca",
+    toppings: "emmental"
+  });
+
+  const addOrderItem = () => {
+    setOrderItem({})
+  };
+
   const handleModal = (show, category) => {
     setOrderItem({  
       size: {},
@@ -71,15 +83,6 @@ const Selection = ({ setShowPopup }) => {
     setFilteredData(response[category]);
     // category is defined in the Button component onClick function below
   };
-
-  
-  // useState for showing the orderItems in the Sidebar component
-  const [orderItem, setOrderItem] = useState({
-    // size: "small",
-    // pasta: "penne",
-    // sauces: "bocca",
-    // toppings: "emmental"
-  });
 
   // animation
   const containerVariants = {
@@ -97,10 +100,6 @@ const Selection = ({ setShowPopup }) => {
       transition: { ease: 'easeInOut'}
     }
   }
-
-  const addOrderItem = () => {
-    setOrderItem({})
-  };
 
   return (
     <motion.div 
@@ -196,7 +195,7 @@ const Selection = ({ setShowPopup }) => {
             {OrderItem!==undefined ? 
               <div>
                 <Card>
-                  {/* <p>{`${orderItem.size} ${orderItem.pasta} ${orderItem.sauces} ${orderItem.toppings}`}</p> */}
+                  <p>{`${orderItem.size} ${orderItem.pasta} ${orderItem.sauces} ${orderItem.toppings}`}</p>
                   <p className={styles.price}>€ 6.50</p>
                 </Card>
               </div> : <p>undefined</p>
